@@ -17,6 +17,9 @@ $ gem install middleman
 $ bundle install
 ```
 
+### CSS framework
+[Bulma: Free, open source, & modern CSS framework based on Flexbox](https://bulma.io/)
+
 ## Starting Server
 ```
 $ middleman
