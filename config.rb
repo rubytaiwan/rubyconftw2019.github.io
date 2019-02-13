@@ -35,6 +35,17 @@ page '/*.txt', layout: false
 # Methods defined in the helpers block are available in templates
 # https://middlemanapp.com/basics/helper-methods/
 
+set :protocol, 'https://'
+set :host, '2019.rubyconf.tw'
+
+helpers do
+
+  def root_url
+    config[:protocol] + config[:host] + '/'
+  end
+
+end
+
 # Build-specific configuration
 # https://middlemanapp.com/advanced/configuration/#environment-specific-settings
 
