@@ -1,0 +1,21 @@
+section.hero.is-fullheight.coming
+  .hero-body.has-text-centered.has-text-white
+    .container
+      figure.image.coming__logo
+        img src="images/rubytaiwan_logo.png"
+      h1.title.is-text-rubik.has-text-shadow.has-margin-top-sm
+        = data.site.title
+      h2.is-event-date.is-text-rubik.has-text-weight-semibold.is-size-3
+        | July 26
+        sup th&nbsp;
+        | - 27
+        sup th
+
+      h3.is-event-venue.is-text-rubik.is-size-4.has-margin-top-sm
+        = data.site.eventLocation_cht
+        br
+        a.is-inline-block.is-pre-line.has-text-white.is-size-5[href= data.site.eventGoogleMap] = data.site.eventLocation_en
+
+      .coming__cta-btns.has-margin-top-md.is-text-rubik
+        a.button.button--cfp.is-large.is-fullwidth href="#" Call for Papers
+        a.button.is-outlined.is-large.is-fullwidth href="#" Become Sponsors

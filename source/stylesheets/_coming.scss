@@ -1,0 +1,42 @@
+.coming {
+  position: relative;
+  background: url("../images/coming_soon_blur.jpg") no-repeat #fff;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+
+  &:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+		left: 0;
+    background-image: linear-gradient(to bottom right,#fff,$c-main);
+    opacity: .8;
+	}
+
+	&__logo {
+		max-width: 240px;
+		padding-right: 1rem;
+		margin: 0 auto;
+	}
+	
+	&__cta-btns {
+		max-width: 300px;
+		margin: 0 auto;
+	}
+	
+	.title {
+		font-size: 4rem;
+		color: #fff;
+		text-shadow: 0 2px 1px rgba($c-main, 0.8);
+	}
+
+	.is-event-venue {
+		a {
+			margin-top: 0.5rem;
+			text-decoration: underline;
+		}
+	}
+}
