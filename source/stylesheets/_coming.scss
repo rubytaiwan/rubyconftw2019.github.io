@@ -17,7 +17,7 @@
 	}
 
 	&__logo {
-		max-width: 240px;
+		max-width: 180px;
 		padding-right: 1rem;
 		margin: 0 auto;
 	}
@@ -28,7 +28,7 @@
 	}
 	
 	.title {
-		font-size: 4rem;
+		font-size: 2.5rem;
 		color: #fff;
 		text-shadow: 0 2px 1px rgba($c-main, 0.8);
 	}
@@ -36,7 +36,37 @@
 	.is-event-venue {
 		a {
 			margin-top: 0.5rem;
+			word-break: break-word;
 			text-decoration: underline;
+		}
+	}
+
+	.is-contact {
+		a {
+			display: inline-block;
+			transition: all, 0.3s;
+			padding: 0 0.75rem;
+			line-height: 2;
+
+			&:hover {
+				color: #D6D6D6 !important;
+			}
+		}
+	}
+
+	@media (min-width: $tablet) {
+		&__logo {
+			max-width: 240px;
+		}
+		
+		.title {
+			font-size: 3.5rem;
+		}
+
+		.is-event-venue {
+			a {
+				white-space: pre-line;
+			}
 		}
 	}
 }
