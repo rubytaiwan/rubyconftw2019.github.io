@@ -59,3 +59,8 @@ configure :build do
   # Relative assets needed to deploy to Github Pages
   activate :relative_assets
 end
+
+activate :deploy do |deploy|
+  deploy.deploy_method = :git
+  deploy.build_before = true
+end
