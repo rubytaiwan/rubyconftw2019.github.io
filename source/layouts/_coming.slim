@@ -26,10 +26,11 @@ section.hero.is-fullheight.coming
             figure.image
               img.is-rounded src="images/mixins/Matz.jpg"
             h3.title.is-size-4 Matz
-          .column.is-4.is-2-widescreen
-            figure.image
-              img.is-rounded src="images/mixins/C9S.jpg"
-            h3.title.is-size-4 C9S
+          - data.site.speakers.each do |item|
+            .column.is-4.is-2-widescreen
+              figure.image
+                img.is-rounded src=item.link
+              h3.title.is-size-4 = item.name
 
       .coming__contact.is-text-rubik.has-margin-top-lg.is-size-5
         - data.site.socialMedia.each do |item|

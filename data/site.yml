@@ -24,6 +24,10 @@ eventAddress_cht: 台北市中正區中山南路11號
 eventAddress_en: No. 11, Zhongshan South Road, Zhongzheng District, Taipei City
 eventGoogleMap: https://www.google.com/maps/place/張榮發基金會/@25.038668,121.5165528,17z
 
+speakers: 
+  - name: C9S
+    link: images/mixins/C9S.jpg
+
 coc: |-
   All attendees, speakers, sponsors and volunteers at our conference are required to agree to follow the Code of Conduct. Organizers will enforce this Code of Conduct throughout the event. We are expecting cooperation from all participants to help ensure a safe environment for everybody.
   Harassment includes offensive verbal comments related to gender, gender identity and expression, age, sexual orientation, disability, physical appearance, body size, race, religion, sexual images in public spaces, deliberate intimidation, stalking, following, harassing photography or recording, sustained disruption of talks or other events, inappropriate physical contact, and unwelcome sexual attention.
