@@ -33,6 +33,27 @@
 		text-shadow: 0 2px 1px rgba($c-main, 0.8);
 	}
 
+	.sub-title {
+		font-size: 2rem;
+		color: #fff;
+		text-shadow: 0 2px 1px rgba($c-main, 0.8);
+		font-weight: bold;
+		padding-bottom: 3rem; 
+	}
+
+	.speakers {
+		img {
+			border-radius: 50%;
+			height: 200px;
+			width: 200px;
+		}
+		h3.name {
+			font-size: 2rem;
+			text-shadow: 0 2px 1px rgba($c-main, 0.8);
+			font-weight: bold;
+		}
+	}
+
 	.is-event-venue {
 		a {
 			margin-top: 0.5rem;
@@ -53,7 +74,6 @@
 			}
 		}
 	}
-
 	@media (min-width: $tablet) {
 		&__logo {
 			max-width: 240px;
@@ -67,6 +87,10 @@
 			a {
 				white-space: pre-line;
 			}
+		}
+
+		.sub-title {
+			font-size: 3rem;
 		}
 	}
 }

@@ -1,31 +1,38 @@
 section.hero.is-fullheight.coming
   .hero-body.has-text-centered.has-text-white
     .container
-      figure.image.coming__logo
-        img src="images/mixins/rubytaiwan_logo.png" alt="#{data.site.title}"
-      h1.title.is-text-rubik.has-text-shadow.has-margin-top-sm
-        = data.site.title
-      h2.is-event-date.is-text-rubik.has-text-weight-semibold.is-size-4.is-size-3-tablet
-        | July 26
-        sup th&nbsp;
-        | - 27
-        sup th
-
-      h3.is-event-venue.is-text-rubik.has-margin-top-sm.is-size-5.is-size-4-tablet
-        = data.site.eventLocation_cht
-        br
-        a.is-inline-block.has-text-white.is-size-5-tablet.is-hidden-mobile[href= data.site.eventGoogleMap target="_blank" rel="noopener"] = data.site.eventLocation_en
-
-      .coming__cta-btns.has-margin-top-md.is-text-rubik
+      section.section    
+        figure.image.coming__logo
+          img src="images/mixins/rubytaiwan_logo.png" alt="#{data.site.title}"
+        h1.title.is-text-rubik.has-text-shadow.has-margin-top-sm
+          = data.site.title
+        h2.is-event-date.is-text-rubik.has-text-weight-semibold.is-size-4.is-size-3-tablet
+          | July 26
+          sup th&nbsp;
+          | - 27
+          sup th
+        h3.is-event-venue.is-text-rubik.has-margin-top-sm.is-size-5.is-size-4-tablet
+          = data.site.eventLocation_cht
+          br
+          a.is-inline-block.has-text-white.is-size-5-tablet.is-hidden-mobile[href= data.site.eventGoogleMap target="_blank" rel="noopener"] = data.site.eventLocation_en
+      section.section
+        h2.sub-title.is-text-rubik.has-text-shadow KEYNOTE SPEAKERS
+        div.columns.speakers.is-text-rubik
+          div.column
+            img src='images/mixins/Matz.jpg' 
+              h3.name Matz
+          div.column
+            img src='images/mixins/C9S.jpg'
+              h3.name C9S
+      section.section   
+        .coming__cta-btns.has-margin-top-md.is-text-rubik
         a.button.button--cfp.is-large.is-fullwidth href="#" Call for Papers
         a.button.is-outlined.is-large.is-fullwidth href="#" Become Sponsors
-      
-      
-      .is-contact.is-text-rubik.has-margin-top-md.is-size-5
-        - data.site.socialMedia.each do |item|
-          a.has-text-white[href=item.link target="_blank" rel="noopener"]
-            span.icon.is-medium
-              i.fab class="fa-#{item.name}"
-            span = item.title
-        br
-        a.has-text-white.is-size-4[href="mailto:#{data.site.contactEmail}"] = data.site.contactEmail
+        .is-contact.is-text-rubik.has-margin-top-md.is-size-5
+          - data.site.socialMedia.each do |item|
+            a.has-text-white[href=item.link target="_blank" rel="noopener"]
+              span.icon.is-medium
+                i.fab class="fa-#{item.name}"
+              span = item.title
+          br
+          a.has-text-white.is-size-4[href="mailto:#{data.site.contactEmail}"] = data.site.contactEmail
