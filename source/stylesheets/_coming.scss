@@ -26,43 +26,8 @@
 		max-width: 300px;
 		margin: 0 auto;
 	}
-	
-	.title {
-		font-size: 2.5rem;
-		color: #fff;
-		text-shadow: 0 2px 1px rgba($c-main, 0.8);
-	}
 
-	.sub-title {
-		font-size: 2rem;
-		color: #fff;
-		text-shadow: 0 2px 1px rgba($c-main, 0.8);
-		font-weight: bold;
-		padding-bottom: 3rem; 
-	}
-
-	.speakers {
-		img {
-			border-radius: 50%;
-			height: 200px;
-			width: 200px;
-		}
-		h3.name {
-			font-size: 2rem;
-			text-shadow: 0 2px 1px rgba($c-main, 0.8);
-			font-weight: bold;
-		}
-	}
-
-	.is-event-venue {
-		a {
-			margin-top: 0.5rem;
-			word-break: break-word;
-			text-decoration: underline;
-		}
-	}
-
-	.is-contact {
+	&__contact {
 		a {
 			display: inline-block;
 			transition: all, 0.3s;
@@ -74,6 +39,32 @@
 			}
 		}
 	}
+	
+	.title {
+		font-size: 2.5rem;
+		color: #fff;
+	}
+
+	.speakers {
+
+		.image {
+			width: 11rem;
+			margin: 0 auto;
+		}
+
+		h3.title {
+			margin: 1rem 0 1.5rem;
+		}
+	}
+
+	.is-event-venue {
+		a {
+			margin-top: 0.5rem;
+			word-break: break-word;
+			text-decoration: underline;
+		}
+	}
+
 	@media (min-width: $tablet) {
 		&__logo {
 			max-width: 240px;
@@ -87,10 +78,6 @@
 			a {
 				white-space: pre-line;
 			}
-		}
-
-		.sub-title {
-			font-size: 3rem;
 		}
 	}
 }

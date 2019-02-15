@@ -43,6 +43,8 @@ body {
 .is-aligned-between   {align-items: space-between;}
 .is-aligned-self-end  {align-self: flex-end;}
 
+.has-text-shadow      {text-shadow: 0 2px 1px rgba($c-main, 0.8);}
+
 $size: (
   sm: 1.5rem,
   md: 3rem,

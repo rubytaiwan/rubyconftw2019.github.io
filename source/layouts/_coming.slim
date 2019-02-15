@@ -1,7 +1,7 @@
 section.hero.is-fullheight.coming
   .hero-body.has-text-centered.has-text-white
     .container
-      section.section    
+      .coming__info
         figure.image.coming__logo
           img src="images/mixins/rubytaiwan_logo.png" alt="#{data.site.title}"
         h1.title.is-text-rubik.has-text-shadow.has-margin-top-sm
@@ -15,24 +15,27 @@ section.hero.is-fullheight.coming
           = data.site.eventLocation_cht
           br
           a.is-inline-block.has-text-white.is-size-5-tablet.is-hidden-mobile[href= data.site.eventGoogleMap target="_blank" rel="noopener"] = data.site.eventLocation_en
-      section.section
-        h2.sub-title.is-text-rubik.has-text-shadow KEYNOTE SPEAKERS
-        div.columns.speakers.is-text-rubik
-          div.column
-            img src='images/mixins/Matz.jpg' 
-              h3.name Matz
-          div.column
-            img src='images/mixins/C9S.jpg'
-              h3.name C9S
-      section.section   
-        .coming__cta-btns.has-margin-top-md.is-text-rubik
+      .coming__cta-btns.has-margin-top-md.is-text-rubik
         a.button.button--cfp.is-large.is-fullwidth href="#" Call for Papers
         a.button.is-outlined.is-large.is-fullwidth href="#" Become Sponsors
-        .is-contact.is-text-rubik.has-margin-top-md.is-size-5
-          - data.site.socialMedia.each do |item|
-            a.has-text-white[href=item.link target="_blank" rel="noopener"]
-              span.icon.is-medium
-                i.fab class="fa-#{item.name}"
-              span = item.title
-          br
-          a.has-text-white.is-size-4[href="mailto:#{data.site.contactEmail}"] = data.site.contactEmail
+
+      .coming__keynote-speaker.has-margin-top-lg
+        h2.title.is-text-rubik.has-text-shadow.has-margin-bottom-md.is-size-2 KEYNOTE SPEAKERS
+        .columns.speakers.is-text-rubik
+          .column.is-4.is-offset-2.is-2-widescreen.is-offset-4-widescreen
+            figure.image
+              img.is-rounded src="images/mixins/Matz.jpg"
+            h3.title.is-size-4 Matz
+          .column.is-4.is-2-widescreen
+            figure.image
+              img.is-rounded src="images/mixins/C9S.jpg"
+            h3.title.is-size-4 C9S
+
+      .coming__contact.is-text-rubik.has-margin-top-lg.is-size-5
+        - data.site.socialMedia.each do |item|
+          a.has-text-white[href=item.link target="_blank" rel="noopener"]
+            span.icon.is-medium
+              i.fab class="fa-#{item.name}"
+            span = item.title
+        br
+        a.has-text-white.is-size-4[href="mailto:#{data.site.contactEmail}"] = data.site.contactEmail
