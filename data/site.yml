@@ -3,7 +3,7 @@ description: 眾所矚目的 Ruby Conf Taiwan 2019 將在 2019 年 7 月 26 - 27
 keywords: 2019,Ruby,Ruby Taiwan,Ruby Conference,Ruby Conf Taiwan,Taiwan
 
 contactEmail: contact@rubyconf.tw
-registerLink: 
+registerLink:
 cfpLink: https://cfp.rubyconf.tw/activities/2018
 supportLink: https://rubyelixirconftw.typeform.com/to/zOjJhK
 socialMedia:
@@ -23,6 +23,10 @@ eventLocation_en: |
 eventAddress_cht: 台北市中正區中山南路11號
 eventAddress_en: No. 11, Zhongshan South Road, Zhongzheng District, Taipei City
 eventGoogleMap: https://www.google.com/maps/place/張榮發基金會/@25.038668,121.5165528,17z
+
+speakers:
+  - name: Matz
+  - name: C9S
 
 coc: |-
   All attendees, speakers, sponsors and volunteers at our conference are required to agree to follow the Code of Conduct. Organizers will enforce this Code of Conduct throughout the event. We are expecting cooperation from all participants to help ensure a safe environment for everybody.

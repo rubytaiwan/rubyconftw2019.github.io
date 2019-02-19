@@ -1,27 +1,34 @@
 section.hero.is-fullheight.coming
   .hero-body.has-text-centered.has-text-white
     .container
-      figure.image.coming__logo
-        img src="images/mixins/rubytaiwan_logo.png" alt="#{data.site.title}"
-      h1.title.is-text-rubik.has-text-shadow.has-margin-top-sm
-        = data.site.title
-      h2.is-event-date.is-text-rubik.has-text-weight-semibold.is-size-4.is-size-3-tablet
-        | July 26
-        sup th&nbsp;
-        | - 27
-        sup th
-
-      h3.is-event-venue.is-text-rubik.has-margin-top-sm.is-size-5.is-size-4-tablet
-        = data.site.eventLocation_cht
-        br
-        a.is-inline-block.has-text-white.is-size-5-tablet.is-hidden-mobile[href= data.site.eventGoogleMap target="_blank" rel="noopener"] = data.site.eventLocation_en
-
+      .coming__info
+        figure.image.coming__logo
+          img src="images/mixins/rubytaiwan_logo.png" alt="#{data.site.title}"
+        h1.title.is-text-rubik.has-text-shadow.has-margin-top-sm
+          = data.site.title
+        h2.is-event-date.is-text-rubik.has-text-weight-semibold.is-size-4.is-size-3-tablet
+          | July 26
+          sup th&nbsp;
+          | - 27
+          sup th
+        h3.is-event-venue.is-text-rubik.has-margin-top-sm.is-size-5.is-size-4-tablet
+          = data.site.eventLocation_cht
+          br
+          a.is-inline-block.has-text-white.is-size-5-tablet.is-hidden-mobile[href= data.site.eventGoogleMap target="_blank" rel="noopener"] = data.site.eventLocation_en
       .coming__cta-btns.has-margin-top-md.is-text-rubik
         a.button.button--cfp.is-large.is-fullwidth href="#" Call for Papers
         a.button.is-outlined.is-large.is-fullwidth href="#" Become Sponsors
-      
-      
-      .is-contact.is-text-rubik.has-margin-top-md.is-size-5
+
+      .coming__keynote-speaker.has-margin-top-lg
+        h2.title.is-text-rubik.has-text-shadow.has-margin-bottom-md.is-size-2 KEYNOTE SPEAKERS
+        .columns.speakers.is-text-rubik
+          - data.site.speakers.each do |item|
+            .column.is-4.is-2-widescreen class="#{item.name == 'Matz' ? 'is-2-widescreen is-offset-4-widescreen' : ''}"
+              figure.image
+                img.is-rounded src="images/mixins/speaker-#{item.name}.jpg" alt="#{data.site.title} Keynote Speaker - #{item.name}"
+              h3.title.is-size-4 = item.name
+
+      .coming__contact.is-text-rubik.has-margin-top-lg.is-size-5
         - data.site.socialMedia.each do |item|
           a.has-text-white[href=item.link target="_blank" rel="noopener"]
             span.icon.is-medium
