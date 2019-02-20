@@ -23,7 +23,7 @@ section.hero.is-fullheight.coming
         h2.title.is-text-rubik.has-text-shadow.has-margin-bottom-md.is-size-2 KEYNOTE SPEAKERS
         .columns.speakers.is-text-rubik
           - data.site.speakers.each do |item|
-            .column.is-4.is-2-widescreen class="#{item.name == 'Matz' ? 'is-2-widescreen is-offset-4-widescreen' : ''}"
+            .column.is-4.is-2-widescreen class="#{item.name == 'Matz' ? 'is-offset-2-tablet is-offset-4-widescreen' : ''}"
               figure.image
                 img.is-rounded src="images/mixins/speaker-#{item.name}.jpg" alt="#{data.site.title} Keynote Speaker - #{item.name}"
               h3.title.is-size-4 = item.name
