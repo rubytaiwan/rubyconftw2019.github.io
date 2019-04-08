@@ -1,28 +1,26 @@
-head
-  meta charset="UTF-8"
-  meta content="IE=edge" http-equiv="X-UA-Compatible"
-  meta content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0" name="viewport"
-  meta name="description" content= data.site.description
-  meta name="keywords" content= data.site.keywords
-  link rel="canonical" href="#{root_url}"
-  title = current_page.data.title || data.site.title
+meta content=("text/html; charset=UTF-8") http-equiv="Content-Type" /
+meta charset="utf-8" /
+meta content="ie=edge" http-equiv="x-ua-compatible" /
+meta content="width=device-width, height=device-height, initial-scale=1, maximum-scale=1" name="viewport" /
+meta content="yes" name="apple-mobile-web-app-capable" /
+meta content="telephone=no" name="format-detection" /
 
-  meta property="og:title" content= data.site.title
-  meta property="og:description" content= data.site.description
-  meta property="og:type" content="website"
-  meta property="og:url" content="#{root_url}"
-  meta property="og:image" content="#{root_url}images/og_image.jpg"
+meta name="description" content="#{data.site.description}" /
+meta name="keywords" content="#{data.site.keywords}" /
 
-  link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png"
-  link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png"
-  link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png"
-  link rel="manifest" href="images/site.webmanifest"
-  link rel="mask-icon" href="images/safari-pinned-tab.svg" color="#bd1e21"
-  meta name="msapplication-TileColor" content="#bd1e21"
-  meta name="theme-color" content="#ffffff"
+meta property="og:site_name" content="#{data.site.title}" /
+meta property="og:title" content="#{data.site.title}" /
+meta property="og:description" content="#{data.site.description}" /
+meta property="og:url" content="#{root_url}" /
+meta property="og:type" content="website" /
+/ meta property="og:image" content="#{root_url + image_path('og_image.png')}" /
 
-  link rel="stylesheet" href="//fonts.googleapis.com/css?family=Noto+Sans+TC|Rubik"
-  link rel="stylesheet" href="//use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous"
+link rel="canonical" href="#{root_url}"
+title = data.site.title
 
-  = stylesheet_link_tag :main
-  = javascript_include_tag :main
+link rel="stylesheet" href="//use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous"
+
+= partial "layouts/shared/favicon"
+
+= stylesheet_link_tag :main
+= javascript_include_tag :main
