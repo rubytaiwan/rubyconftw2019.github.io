@@ -1,0 +1,11 @@
+// Navbar
+.navbar {
+
+  .navbar-item img {
+    max-height: 4rem;
+  }
+
+  @include tablet {
+    min-height: 7.5rem;
+  }
+}

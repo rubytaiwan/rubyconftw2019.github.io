@@ -1,0 +1,15 @@
+nav#navbar.navbar.is-fixed-top.is-transparent[role="navigation" aria-label="main navigation"]
+  .container
+    .navbar-brand
+      = link_to '/', class:'navbar-item' do
+        = image_tag( 'mixins/main_logo.svg', alt: data.site.title, height:'60px')
+      a.navbar-burger.burger[role="button" aria-label="menu" aria-expanded="false" data-target="mainNavbar"]
+        span[aria-hidden="true"]
+        span[aria-hidden="true"]
+        span[aria-hidden="true"]
+    #mainNavbar.navbar-menu
+      .navbar-end.has-text-centered
+        - ['News', 'Speakers', 'Schedule', 'Venue', 'Parties', 'Sponsors'].each do |item|
+          = link_to item, '#'+item.parameterize, class:'navbar-item'
+        .navbar-item.has-text-centered
+          = link_to 'Register Now', '/', class:'button is-primary'
