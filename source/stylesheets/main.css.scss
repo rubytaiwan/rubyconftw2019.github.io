@@ -1,9 +1,28 @@
-/*
-*= require bulma
-*/
-
 @charset "utf-8";
 
-@import "base/styleguide";
+@import url('https://fonts.googleapis.com/css?family=Lato|Noto+Sans+TC|Tenali+Ramakrishna');
 
-@import "coming";
+// Overwrite Bulma variables
+
+// Color
+$primary: #902e1b;
+
+// Breakpoints
+$tablet: 768px;
+
+// Components/Navbar
+$navbar-height: 5rem;
+$navbar-background-color: transparent;
+$navbar-item-hover-color: $primary;
+$navbar-item-active-color: $primary;
+$navbar-burger-color: $primary;
+
+// Elements/Button
+$button-padding-horizontal: 1em;
+
+@import "bulma";
+
+@import "base/styleguide";
+@import "base/shared";
+
+@import "cover";
