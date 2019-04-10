@@ -7,10 +7,10 @@ registerLink:
 cfpLink: https://cfp.rubyconf.tw/activities/2019
 supportLink: https://rubyelixirconftw.typeform.com/to/JRlRsr
 socialMedia:
-  - name: twitter
+  - name: Twitter
     title: '@rubyconftw'
     link: https://twitter.com/rubyconftw
-  - name: facebook
+  - name: Facebook
     title: RubyConf Taiwan
     link: https://www.facebook.com/rubyconftw/
 

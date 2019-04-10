@@ -1,0 +1,26 @@
+.background-arch-footer--white.has-background-primary
+footer.footer.has-background-primary
+  .container
+    .columns.is-marginless.has-text-pastel.has-text-weight-bold
+      .column
+        figure.image
+          = image_tag( 'mixins/main_logo_mono.svg', alt: data.site.title, class:'footer__logo')
+      .column
+        ul.footer__list
+          li.has-modal data-target="#code-of-conduct" Code of Conduct
+          li.has-modal data-target="#team-members" Team Members
+          li
+            = link_to 'Ruby Taiwan', 'https://ruby.tw/', target: '_blank', rel:'noopener noreferrer', class:'has-text-pastel'
+      .column
+        ul.footer__list.footer__social
+          - data.site.socialMedia.each do |item|
+            li
+              span = item.name
+              = link_to item.title, item.link, target: '_blank', rel:'noopener noreferrer', class: 'has-text-pastel has-text-weight-semibold'
+          li
+            span E-mail
+            = mail_to data.site.contactEmail, data.site.contactEmail, class: 'has-text-pastel has-text-weight-semibold'
+
+    .level.has-margin-top-md
+      .level-item
+        p.footer__copyright.has-text-pastel.has-text-weight-semibold © #{data.site.title}
