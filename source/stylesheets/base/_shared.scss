@@ -1,3 +1,12 @@
+body {
+  overflow: hidden;
+}
+
+.section {
+  position: relative;
+  z-index: 3;
+}
+
 // Navbar
 .navbar {
 
@@ -7,5 +16,38 @@
 
   @include tablet {
     min-height: 7.5rem;
+  }
+}
+
+// Footer
+.footer {
+  position: relative;
+  padding: 3rem 1.5rem !important;
+  z-index: 1;
+  
+  &__logo {
+    max-width: 180px;
+  }
+
+  &__list {
+    line-height: 2;
+
+    span {
+      padding-right: 0.75rem;
+    }
+
+    .has-modal {
+      cursor: pointer;
+    }
+  }
+
+  &__social {
+    a.has-text-pastel {
+      opacity: 0.7;
+
+      &:hover {
+        opacity: 1;
+      }
+    }
   }
 }

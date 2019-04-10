@@ -19,6 +19,14 @@ $size: (
 .is-text-noto   {font-family: 'Noto Sans TC', sans-serif;}
 .is-text-tenali {font-family: 'Tenali Ramakrishna', sans-serif;}
 
+.has-text-pastel {
+  color: $c-pastel;
+
+  &:hover {
+    color: $c-pastel !important;
+  }
+}
+
 // Customized Helpers
 .is-pre-line          {white-space: pre-line;}
 
@@ -60,3 +68,54 @@ $size: (
 
 // Style Custom helpers
 .has-background-pastel  {background-color: $c-pastel}
+.has-background-tile    {background: $c-pastel image-url('mixins/bg_tile.svg');}
+
+.has-background-stripe {
+
+  .container {
+
+    &::before {
+      content: '';
+      position: absolute;
+      transform: translateY(-100%);
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: $c-pastel;
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      transform: translateY(100%);
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: $c-pastel;
+    }
+  }
+}
+
+.background-arch-header {
+
+  &--white {
+    @include background-arch(white, 50% 50% 0 0);
+  }
+
+  &--primary {
+    @include background-arch($primary, 50% 50% 0 0);
+  }
+}
+
+.background-arch-footer {
+
+  &--white {
+    @include background-arch(white, 0 0 50% 50%);
+  }
+
+  &--primary {
+    @include background-arch($primary, 0 0 50% 50%);
+  }
+}

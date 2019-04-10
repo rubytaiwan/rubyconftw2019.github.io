@@ -22,7 +22,10 @@ $button-padding-horizontal: 1em;
 
 @import "bulma";
 
+@import "base/mixin";
 @import "base/styleguide";
 @import "base/shared";
 
 @import "cover";
+@import "speakers";
+@import "sponsors";
