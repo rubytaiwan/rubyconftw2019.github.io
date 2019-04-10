@@ -7,6 +7,21 @@ body {
   z-index: 3;
 }
 
+.scrollup {
+  display: none;
+  position: fixed;
+  bottom: 0.5rem;
+  right: 0.5rem;
+  cursor: pointer;
+  text-shadow: 0 2px 4px rgba($grey, 0.3);
+  z-index: 1025;
+
+  @include tablet {
+    bottom: 1.5rem;
+    right: 1.5rem;
+  }
+}
+
 // Navbar
 .navbar {
   transition: all 0.3s ease-out;

@@ -27,6 +27,14 @@ $size: (
   }
 }
 
+.has-text-orange {
+  color: $c-orange;
+
+  &:hover {
+    color: $c-orange !important;
+  }
+}
+
 // Customized Helpers
 .is-pre-line          {white-space: pre-line;}
 
