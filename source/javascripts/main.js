@@ -1,5 +1,6 @@
 //= require jquery
 //= require jquery.easing
+//= require vender/in-view.min.js
 
 document.addEventListener('DOMContentLoaded', function() {
 
@@ -36,6 +37,24 @@ document.addEventListener('DOMContentLoaded', function() {
     }
   }
 
+  // Scrollspy
+  var handleView = function handleView(item) {
+    var linkEl = document.querySelector("#nav-" + item);
+  
+    var offsetHeight = 0.8 * window.innerHeight;
+    inView.offset({
+      bottom: offsetHeight
+    });
+  
+    inView("." + item).on("enter", function () {
+      return linkEl.classList.add('is-active');
+    }).on("exit", function (el) {
+      return linkEl.classList.remove('is-active');
+    });
+  };
+
+  ['news', 'speakers', 'venue', 'schedule', 'parties', 'sponsors'].forEach(handleView);
+
   // Scrolling
   $(window).scroll(function () {
     if ($(this).scrollTop() > 100) {
@@ -50,5 +69,13 @@ document.addEventListener('DOMContentLoaded', function() {
       scrollTop: 0
     }, 800, 'easeInOutQuart');
     return false;
+  });
+
+  $('.navbar-menu .navbar-item').bind('click', function(event) {
+    var $anchor = $(this);
+    $('html, body').stop().animate({
+      scrollTop: ($($anchor.attr('href')).offset().top - 80)
+    }, 800, 'easeInOutQuart');
+    event.preventDefault();
   });
 });
