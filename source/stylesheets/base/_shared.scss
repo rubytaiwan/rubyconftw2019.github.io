@@ -9,13 +9,19 @@ body {
 
 // Navbar
 .navbar {
+  transition: all 0.3s ease-out;
 
   .navbar-item img {
     max-height: 4rem;
   }
 
-  @include tablet {
-    min-height: 7.5rem;
+  .navbar-burger span {
+    height: 2px;
+  }
+
+  &.is-shrink {
+    background-color: transparent;
+    padding: 1rem;
   }
 }
 
