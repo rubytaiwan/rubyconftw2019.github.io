@@ -1,0 +1,17 @@
+@mixin background-arch($color, $radius) {
+  position: relative;
+  padding-top: 16%;
+  z-index: 2;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -1.5rem;
+    width: calc( 100% + 3rem);
+    height: 100%;
+    background: $color;
+    border-radius: $radius;
+    box-shadow: 0 0 10px 0 rgba($dark, 0.3);
+  }
+}

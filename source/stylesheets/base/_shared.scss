@@ -1,0 +1,89 @@
+body {
+  position: relative;
+  overflow: hidden;
+}
+
+.section {
+  position: relative;
+  z-index: 3;
+}
+
+.scrollup {
+  display: none;
+  position: fixed;
+  bottom: 0.5rem;
+  right: 0.5rem;
+  cursor: pointer;
+  text-shadow: 0 2px 4px rgba($grey, 0.3);
+  z-index: 30;
+
+  @include tablet {
+    bottom: 1.5rem;
+    right: 1.5rem;
+  }
+}
+
+// Navbar
+.navbar {
+  transition: all 0.3s ease-out;
+
+  .navbar-item img {
+    max-height: 4rem;
+  }
+
+  .navbar-burger span {
+    height: 2px;
+  }
+
+  &.is-shrink {
+    background-color: transparent;
+    padding: 1rem;
+  }
+}
+
+// Footer
+.footer {
+  padding: 3rem 1.5rem !important;
+  z-index: 1;
+  
+  &__logo {
+    max-width: 180px;
+  }
+
+  &__list {
+    line-height: 2;
+
+    span {
+      padding-right: 0.75rem;
+    }
+
+    .modal-button {
+      cursor: pointer;
+    }
+  }
+
+  &__social {
+    a.has-text-pastel {
+      opacity: 0.7;
+
+      &:hover {
+        opacity: 1;
+      }
+    }
+  }
+}
+
+// Modal
+.modal {
+
+  .modal-card {
+    max-width: 960px;
+  }
+
+  .modal-card-body {
+
+    &.code-of-conduct p + p {
+      margin-top: 1rem;
+    }
+  }
+}

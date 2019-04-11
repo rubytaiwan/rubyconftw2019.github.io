@@ -1,49 +1,13 @@
-$gap: 64px;
-$tablet: 769px;
-$desktop: 960px + (2 * $gap);
-$widescreen: 1152px + (2 * $gap);
-$fullhd: 1344px + (2 * $gap);
+// Color palette
+$c-pastel: #ebe2c4;
+$c-orange: #e37b3a;
 
-/* Color palette */
-$c-main: #E51A3C;
-
-$c-pink-500: #E91E63;
-$c-pink-600: #D81B60;
-$c-pink-700: #C2185B;
-
-/* Font */
-body {
-  font-family: "Noto Sans TC", BlinkMacSystemFont, -apple-system, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", "Helvetica", "Arial", sans-serif !important;
-
-  a, p {
-    word-break: break-all;
-  }
-}
-
-/* Customized Helpers */
-.is-text-rubik         {font-family: "Rubik", sans-serif;}
-
-.is-pre-line          {white-space: pre-line;}
-
-.is-flex-wrap         {flex-wrap: wrap;}
-.is-flex-row-reverse  {flex-direction: row-reverse;}
-.is-flex-column       {flex-direction: column;}
-.is-flex-grow         {flex-grow: 2;}
-
-.is-justified-center  {justify-content: center;}
-.is-justified-start   {justify-content: flex-start;}
-.is-justified-end     {justify-content: flex-end;}
-.is-justified-around  {justify-content: space-around;}
-.is-justified-between {justify-content: space-between;}
-.is-aligned-start     {align-items: flex-start;}
-.is-aligned-center    {align-items: center;}
-.is-aligned-end       {align-items: flex-end;}
-.is-aligned-stretch   {align-items: stretch;}
-.is-aligned-around    {align-items: space-around;}
-.is-aligned-between   {align-items: space-between;}
-.is-aligned-self-end  {align-self: flex-end;}
-
-.has-text-shadow      {text-shadow: 0 2px 1px rgba($c-main, 0.8);}
+$breakpoint: (
+  tablet: $tablet,
+  desktop: $desktop,
+  widescreen: $widescreen,
+  fullhd: $fullhd,
+);
 
 $size: (
   sm: 1.5rem,
@@ -51,6 +15,44 @@ $size: (
   lg: 5rem,
 );
 
+// Text Custom helpers
+.is-text-noto   {font-family: 'Noto Sans TC', sans-serif;}
+.is-text-tenali {font-family: 'Tenali Ramakrishna', sans-serif;}
+
+.has-text-pastel {
+  color: $c-pastel;
+
+  &:hover {
+    color: $c-pastel !important;
+  }
+}
+
+.has-text-orange {
+  color: $c-orange;
+
+  &:hover {
+    color: $c-orange !important;
+  }
+}
+
+// Customized Helpers
+.is-pre-line          {white-space: pre-line;}
+
+// Flexbox Custom helpers
+.is-justified-center  {justify-content: center !important;}
+.is-justified-start   {justify-content: flex-start !important;}
+.is-justified-end     {justify-content: flex-end !important;}
+.is-justified-around  {justify-content: space-around !important;}
+.is-justified-between {justify-content: space-between !important;}
+.is-aligned-start     {align-items: flex-start !important;}
+.is-aligned-center    {align-items: center !important;}
+.is-aligned-end       {align-items: flex-end !important;}
+.is-aligned-stretch   {align-items: stretch !important;}
+.is-aligned-around    {align-items: space-around !important;}
+.is-aligned-between   {align-items: space-between !important;}
+.is-aligned-self-end  {align-self: flex-end !important;}
+
+// Padding & Margin helpers
 @each $key, $val in $size {
   .has-margin-top-#{$key} {margin-top: $val !important;}
   .has-margin-bottom-#{$key} {margin-bottom: $val !important;}
@@ -58,58 +60,70 @@ $size: (
   .has-padding-width-#{$key} {padding: 0 $val !important;}
 }
 
-@media (min-width: $tablet) {
-  @each $key, $val in $size {
-    .has-margin-top-#{$key}-tablet {margin-top: $val !important;}
-    .has-margin-bottom-#{$key}-tablet {margin-bottom: $val !important;}
-    .has-padding-#{$key}-tablet {padding: $val !important;}
-    .has-padding-width-#{$key}-tablet {padding: 0 $val !important;}
+@each $viewport, $breakpoint in $breakpoint {
+
+  @media (min-width: #{$breakpoint}) {
+    .is-marginless-#{$viewport} {margin: 0 !important;}
+
+    @each $key, $val in $size {
+      .has-margin-top-#{$key}-#{$viewport} {margin-top: $val !important;}
+      .has-margin-bottom-#{$key}-#{$viewport} {margin-bottom: $val !important;}
+      .has-padding-#{$key}-#{$viewport} {padding: $val !important;}
+      .has-padding-width-#{$key}-#{$viewport} {padding: 0 $val !important;}
+    }
   }
 }
 
-@media (min-width: $desktop) {
-  @each $key, $val in $size {
-    .has-margin-top-#{$key}-desktop {margin-top: $val !important;}
-    .has-margin-bottom-#{$key}-desktop {margin-bottom: $val !important;}
-    .has-padding-#{$key}-desktop {padding: $val !important;}
-    .has-padding-width-#{$key}-desktop {padding: 0 $val !important;}
+// Style Custom helpers
+.has-background-pastel  {background-color: $c-pastel}
+.has-background-tile    {background: $c-pastel image-url('mixins/bg_tile.svg');}
 
-    .has-padding-top-mega {padding-top: 10rem !important;}
+.has-background-stripe {
+
+  .container {
+
+    &::before {
+      content: '';
+      position: absolute;
+      transform: translateY(-100%);
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: $c-pastel;
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      transform: translateY(100%);
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: $c-pastel;
+    }
   }
 }
 
-.button {
-  transition: all, 0.3s;
+.background-arch-header {
 
-  &.is-outlined {
-    background-color: transparent;
-    border: 1px solid #fff;
-    color: #fff;
-
-    &:hover {
-      color: #fff;
-      background-color: $c-pink-500;
-      border: 1px solid $c-pink-500;
-    }
+  &--white {
+    @include background-arch(white, 50% 50% 0 0);
   }
 
-  &--cfp {
-    background: $c-pink-500;
-    border-color: $c-pink-500;
-    box-shadow: 0 2px 1px $c-pink-600;
-    margin-bottom: 1.5rem !important;
-    
-    color: #fff;
-    font-weight: bold;
+  &--primary {
+    @include background-arch($primary, 50% 50% 0 0);
+  }
+}
 
-    &:active, &:hover, &:focus, &:visited {
-      color: #fff;
-    }
+.background-arch-footer {
 
-    &:hover {
-      background: $c-pink-600;
-      border-color: $c-pink-600;
-      box-shadow: 0 2px 1px $c-pink-700;
-    }
+  &--white {
+    @include background-arch(white, 0 0 50% 50%);
+  }
+
+  &--primary {
+    @include background-arch($primary, 0 0 50% 50%);
   }
 }

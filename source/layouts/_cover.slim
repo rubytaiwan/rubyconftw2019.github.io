@@ -1,0 +1,10 @@
+section.cover.hero.is-fullheight
+  .hero-body
+    .container
+      h1.title = data.site.title
+      figure.image
+        = image_tag( 'mixins/main_logo.svg', alt: data.site.title)
+      / = inline_svg('main_logo')
+    
+  .hero-foot
+    .background-arch-header--primary

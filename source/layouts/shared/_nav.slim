@@ -1,0 +1,15 @@
+nav#navbar.navbar.is-fixed-top.is-transparent.is-shrink[role="navigation" aria-label="main navigation"]
+  .container
+    .navbar-brand
+      .navbar-item
+        = image_tag( 'mixins/main_logo.svg', alt: data.site.title)
+      a.navbar-burger.burger[role="button" aria-label="menu" aria-expanded="false" data-target="mainNavbar"]
+        span[aria-hidden="true"]
+        span[aria-hidden="true"]
+        span[aria-hidden="true"]
+    #mainNavbar.navbar-menu
+      .navbar-end.has-text-centered
+        - ['News', 'Speakers', 'Venue', 'Schedule' ,'Parties', 'Sponsors'].each do |item|
+          = link_to item, '#' + item.parameterize + '-section', class:'navbar-item', id: 'nav-' + item.parameterize
+        .navbar-item.has-text-centered
+          = link_to 'Call for Papers', data.site.cfpLink, target:'_blank', class:'button is-primary'
