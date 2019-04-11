@@ -3,9 +3,31 @@ body {
   overflow: hidden;
 }
 
+header {
+  margin-bottom: 3rem;
+  
+  @include tablet {
+    margin-bottom: 5rem;
+  }
+}
+
 .section {
   position: relative;
   z-index: 3;
+
+  &.is-alt-section {
+    z-index: 1;
+
+    > .container {
+      padding: 3rem 1.5rem;
+    }
+
+    @include desktop {
+      > .container {
+        padding: 5rem 3rem;
+      }
+    }
+  }
 }
 
 .scrollup {
