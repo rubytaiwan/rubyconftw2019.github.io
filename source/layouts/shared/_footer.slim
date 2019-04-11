@@ -7,8 +7,8 @@ footer.footer.has-background-primary
           = image_tag( 'mixins/main_logo_mono.svg', alt: data.site.title, class:'footer__logo')
       .column
         ul.footer__list
-          li.has-modal data-target="#code-of-conduct" Code of Conduct
-          li.has-modal data-target="#team-members" Team Members
+          li.modal-button data-target="code-of-conduct" Code of Conduct
+          li.modal-button data-target="team-members" Team Members
           li
             = link_to 'Ruby Taiwan', 'https://ruby.tw/', target: '_blank', rel:'noopener noreferrer', class:'has-text-pastel'
       .column
@@ -24,6 +24,50 @@ footer.footer.has-background-primary
     .level.has-margin-top-md
       .level-item
         p.footer__copyright.has-text-pastel.has-text-weight-semibold © #{data.site.title}
+
+  .modal#code-of-conduct
+    .modal-background
+    .modal-card
+      header.modal-card-head
+        p.modal-card-title Code of Conduct
+        button.delete[aria-label="close"]
+      section.modal-card-body.code-of-conduct
+        = markdown(data.site.coc)
+      footer.modal-card-foot.is-justified-center
+        button.button.is-inverted.is-outlined.has-padding-width-md Close
+
+  .modal#team-members
+    .modal-background
+    .modal-card
+      header.modal-card-head
+        p.modal-card-title Team Members
+        button.delete[aria-label="close"]
+      section.modal-card-body
+        .columns.is-multiline.has-text-centered
+          - data.site.teamMember.each do |member|
+            .column.is-one-third
+              p.member__name.has-text-weight-semibold.is-size-5 = member.name
+              p.member__title.has-text-grey = member.title
+
+              ul.member__socials
+                - if member.urlHome
+                  li.is-inline-block
+                    = link_to member.urlHome, target: '_blank', rel:'noopener noreferrer', class:'has-text-grey-lighter' do
+                      span.icon.is-medium
+                        i.fas.fa-home.fa-lg
+                - if member.urltwitter
+                  li.is-inline-block
+                    = link_to member.urltwitter, target: '_blank', rel:'noopener noreferrer', class:'has-text-grey-lighter' do
+                      span.icon.is-medium
+                        i.fab.fa-twitter.fa-lg
+                - if member.urlGithub
+                  li.is-inline-block
+                    = link_to member.urlGithub, target: '_blank', rel:'noopener noreferrer', class:'has-text-grey-lighter' do
+                      span.icon.is-medium
+                        i.fab.fa-github.fa-lg
+
+      footer.modal-card-foot.is-justified-center
+        button.button.is-inverted.is-outlined.has-padding-width-md Close
 
 .scrollup
   a href="#"

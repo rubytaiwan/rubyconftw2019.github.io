@@ -113,6 +113,7 @@ GEM
     rb-fsevent (0.10.3)
     rb-inotify (0.10.0)
       ffi (~> 1.0)
+    redcarpet (3.4.0)
     sass (3.4.25)
     servolux (0.13.0)
     slim (4.0.1)
@@ -142,8 +143,9 @@ DEPENDENCIES
   rails-assets-bulma!
   rails-assets-jquery!
   rails-assets-jquery.easing!
+  redcarpet
   sass
   slim
 
 BUNDLED WITH
-   1.16.4
+   1.17.1

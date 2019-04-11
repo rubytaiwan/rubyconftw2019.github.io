@@ -20,6 +20,11 @@ $navbar-burger-color: $primary;
 // Elements/Button
 $button-padding-horizontal: 1em;
 
+// Components/Modal
+$modal-content-width: calc( 100% - 3rem);
+$modal-card-spacing: 64px;
+$modal-card-head-radius: 4px;
+
 @import "bulma";
 
 @import "base/mixin";
