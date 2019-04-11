@@ -1,5 +1,20 @@
 .background-arch-footer--primary
-section.section.venue#venue-section.has-background-stripe
+section.section.is-alt-section.venue#venue-section.is-paddingless
   .container.has-background-pastel
     header.has-text-centered
       h2.title.is-capitalized.has-text-primary Venue
+    
+    .columns
+      .column.is-flex.is-justified-center.is-aligned-center
+        figure.image
+          = image_tag( 'mixins/venue.jpg', alt: data.site.eventLocation_cht + data.site.eventLocation_en)
+      .column.is-flex.is-aligned-center
+        .venue__info
+          .venue__location.has-text-primary.is-size-5
+            p.is-pre-line.has-text-weight-semibold.is-size-4-desktop = data.site.eventLocation_en
+            p = data.site.eventLocation_cht
+          .venue__address.has-margin-top-sm
+            p = data.site.eventAddress_en
+            p = data.site.eventAddress_cht
+
+          = link_to 'Google Map', data.site.eventGoogleMap, target: '_blank', rel:'noopener noreferrer', class:"button is-outlined is-primary has-margin-top-sm"
