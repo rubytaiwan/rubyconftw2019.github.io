@@ -28,21 +28,21 @@ footer.footer.has-background-primary
   .modal#code-of-conduct
     .modal-background
     .modal-card
-      header.modal-card-head
+      .modal-card-head
         p.modal-card-title Code of Conduct
         button.delete[aria-label="close"]
-      section.modal-card-body.code-of-conduct
+      .modal-card-body.code-of-conduct
         = markdown(data.site.coc)
-      footer.modal-card-foot.is-justified-center
+      .modal-card-foot.is-justified-center
         button.button.is-inverted.is-outlined.has-padding-width-md Close
 
   .modal#team-members
     .modal-background
     .modal-card
-      header.modal-card-head
+      .modal-card-head
         p.modal-card-title Team Members
         button.delete[aria-label="close"]
-      section.modal-card-body
+      .modal-card-body
         .columns.is-multiline.has-text-centered
           - data.site.teamMember.each do |member|
             .column.is-one-third
@@ -66,7 +66,7 @@ footer.footer.has-background-primary
                       span.icon.is-medium
                         i.fab.fa-github.fa-lg
 
-      footer.modal-card-foot.is-justified-center
+      .modal-card-foot.is-justified-center
         button.button.is-inverted.is-outlined.has-padding-width-md Close
 
 .scrollup
