@@ -2,3 +2,22 @@ section.section.is-alt-section.parties#parties-section.is-paddingless
   .container.has-background-pastel
     header.has-text-centered
       h2.title.is-capitalized.has-text-primary Parties
+
+    .columns
+      - data.site.parties.each do |party|
+        .column
+          .card.parties__card class="parties__#{party.session.parameterize.underscore}"
+            .parties__cover.is-flex.is-justified-center
+                = image_tag( 'mixins/parties_banner.svg', alt: '2019 Ruby Conf Taiwan -' + party.session)
+                = image_tag( 'mixins/parties_ic_' + party.session.parameterize.underscore + '.svg', alt: '2019 Ruby Conf Taiwan -' + party.session, class:'has-margin-top-sm')
+
+            .parties__footer.has-background-primary.has-text-pastel.has-text-centered.has-text-weight-semibold.is-size-5
+              span.icon.is-medium
+                i.fas.fa-certificate
+              p.parties__location = party.location
+              p.parties__datetime = party.datetime
+
+              button.button.parties__btn.is-outlined.is-info.is-medium[disabled=""] = party.cfaBtn
+
+              span.icon.is-medium
+                i.fas.fa-certificate
