@@ -1,3 +1,39 @@
 .news {
   padding-top: 0;
+
+  &__list {
+    border-top: 1px solid rgba($c-pastel, 0.2);
+  }
+
+  &__item {
+    border-bottom: 1px solid rgba($c-pastel, 0.2);
+    padding: 1.75rem 0.5rem;
+    cursor: pointer;
+
+    &:hover {
+      background-color: rgba($c-pastel, 0.1);
+    }
+  }
+
+  &__modals {
+
+    .modal-card-title span {
+      margin-top: 1rem;
+    }
+  }
+
+  #news-more {
+    transition: all 0.3s;
+
+    &:hover, &:focus {
+      color: $primary
+    }
+  }
+
+  @include tablet {
+
+    &__item {
+      padding: 1.5rem 1.5rem;
+    }
+  }
 }

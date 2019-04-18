@@ -2,3 +2,39 @@ section.section.news#news-section.has-background-primary
   .container
     header.has-text-centered
       h2.title.is-capitalized.has-text-white News
+
+    .news__list.has-text-info
+      - data.news.each.with_index(1) do |post, index|
+        .news__item.is-size-5 class="#{post.slug ? 'modal-button' : ''} #{index > 5 ? 'inactive is-hidden' : ''}" data-toggle='modal' data-target="#{post.slug ? post.slug.parameterize.dasherize : ''}"
+          .columns
+            .column.is-flex.is-justified-center.is-aligned-center.is-narrow
+              .news-date.has-text-centered.is-size-6
+                span = format_date(post.date)
+            .column.is-flex.is-justified-center.is-aligned-center.is-1.is-paddingless
+              span.icon[style="font-size: 0.5rem;"]
+                i.fas.fa-asterisk
+            .column
+              .news-title
+                span = post.title
+
+        - if index > 5
+          .level.has-margin-top-md
+            .level-item
+              button#news-more.button.is-info.is-outlined View More
+
+.news__modals
+  - data.news.each do |post|
+    - if post.slug ?
+      .modal id="#{post.slug.parameterize.dasherize}"
+        .modal-background
+        .modal-card
+          .modal-card-head.is-aligned-start.has-background-white
+            p.modal-card-title
+              = post.title
+              br
+              span.is-block.is-size-6.has-text-grey = format_date(post.date)
+            button.delete[aria-label="close"]
+          .modal-card-body.is-size-5-tablet
+            = markdown(post.content)
+          .modal-card-foot.has-background-white.is-justified-center
+            button.button.is-inverted.is-outlined.has-padding-width-md Close

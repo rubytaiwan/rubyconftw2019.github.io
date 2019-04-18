@@ -99,13 +99,29 @@ header {
 .modal {
 
   .modal-card {
+    width: calc( 100% - 3rem);
     max-width: 960px;
   }
 
+  .modal-card-head {
+
+    .modal-card-title {
+      flex-shrink: 1;
+    }
+  }
+
   .modal-card-body {
+    word-break: break-word;
 
     &.code-of-conduct p + p {
       margin-top: 1rem;
+    }
+  }
+
+  @include tablet {
+
+    .modal-card-head, .modal-card-body, .modal-card-foot {
+      padding: 2rem;
     }
   }
 }

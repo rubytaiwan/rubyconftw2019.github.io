@@ -22,9 +22,10 @@ $navbar-burger-color: $primary;
 $button-padding-horizontal: 1em;
 
 // Components/Modal
-$modal-content-width: calc( 100% - 3rem);
-$modal-card-spacing: 64px;
 $modal-card-head-radius: 4px;
+$modal-card-spacing: 64px;
+$modal-card-head-padding: 1.5rem;
+$modal-card-body-padding: 1.5rem;
 
 @import "bulma";
 
@@ -33,6 +34,7 @@ $modal-card-head-radius: 4px;
 @import "base/shared";
 
 @import "cover";
+@import "news";
 @import "speakers";
 @import "venue";
 @import "parties";
