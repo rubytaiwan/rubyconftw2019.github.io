@@ -11,12 +11,18 @@ module ViewHelpers
     "(not found)"
   end
 
+  def format_date(date)
+    date = Date.parse(date)
+    date.strftime("%b %d, %Y")
+  end
+
   def markdown(text)
     options = {
       link_attributes: { target: "_blank" },
       space_after_headers: true,
       fenced_code_blocks: true,
-      prettify: true
+      prettify: true,
+      hard_wrap: true
     }
 
     extensions = {
