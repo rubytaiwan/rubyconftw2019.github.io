@@ -2,3 +2,19 @@ section.section.speakers#speakers-section.has-background-primary
   .container
     header.has-text-centered
       h2.title.is-capitalized.has-text-white Speakers
+
+    .speakers__list.has-margin-top-lg
+      .columns.is-multiline.is-justified-center
+        - data.speakers.each do |speaker|
+          .column.is-half-tablet.is-one-third-desktop
+            figure.image.speakers__avatar
+              = image_tag( 'speakers/'+ speaker.avatar, alt: [data.site.title , speaker.name].compact.join(' - '), class:'is-rounded')
+            .speakers__info.has-text-centered.has-margin-top-sm.has-margin-bottom-sm
+              h4.has-text-info.has-text-weight-semibold.is-size-5 = speaker.name
+              p.has-text-grey-lighter = speaker.title
+
+    .speakers__cfp.has-text-centered.has-margin-top-md.has-margin-top-lg-tablet
+      em.has-text-info.is-size-4
+        | &ldquo;&nbsp;We are Calling for Papers!&nbsp;
+        = link_to 'Submit', data.site.cfpLink, target:'_blank', class:'has-text-info has-text-weight-semibold'
+        | &nbsp;now to become one of our speakers.&nbsp;&rdquo;

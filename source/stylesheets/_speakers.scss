@@ -1,2 +1,17 @@
 .speakers {
+
+  &__avatar{
+    max-width: 180px;
+    margin: 0 auto;
+  }
+
+  &__cfp {
+    a {
+      border-bottom: 1px solid $info;
+    }
+  }
+
+  @include widescreen {
+    padding-bottom: 0;
+  }
 }
