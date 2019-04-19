@@ -25,7 +25,7 @@ section.section.news#news-section.has-background-primary
 .news__modals
   - data.news.each do |post|
     - if post.slug ?
-      .modal id="#{post.slug.parameterize.dasherize}"
+      .modal id="#{post.slug.parameterize}"
         .modal-background
         .modal-card
           .modal-card-head.is-aligned-start.has-background-white

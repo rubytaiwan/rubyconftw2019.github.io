@@ -19,14 +19,24 @@ header {
     z-index: 1;
 
     > .container {
-      padding: 3rem 1.5rem;
+      padding: 5rem 1.5rem;
+    }
+
+    @include tablet {
+      > .container {
+        padding: 7rem 1.5rem;
+      }
     }
 
     @include desktop {
       > .container {
-        padding: 5rem 3rem;
+        padding: 7rem 3rem;
       }
     }
+  }
+
+  @include tablet {
+    padding: 5rem 1.5rem;
   }
 }
 
