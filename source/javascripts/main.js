@@ -2,6 +2,7 @@
 //= require jquery.easing
 //= require vender/bulma-modal.js
 //= require vender/in-view.min.js
+//= require vender/lazysizes.min.js
 
 document.addEventListener('DOMContentLoaded', function() {
 
