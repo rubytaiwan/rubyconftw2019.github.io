@@ -24,10 +24,6 @@ eventAddress_cht: 台北市中正區中山南路11號
 eventAddress_en: No. 11, Zhongshan South Road, Zhongzheng District, Taipei City
 eventGoogleMap: https://www.google.com/maps/place/張榮發基金會/@25.038668,121.5165528,17z
 
-speakers:
-  - name: Matz
-  - name: C9S
-
 parties:
   - session: Pre Party
     datetime: Jul 25th, 19:00 - 21:00

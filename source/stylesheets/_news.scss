@@ -1,5 +1,4 @@
 .news {
-  padding-top: 0;
 
   &__list {
     border-top: 1px solid rgba($c-pastel, 0.2);
@@ -31,9 +30,12 @@
   }
 
   @include tablet {
-
     &__item {
       padding: 1.5rem 1.5rem;
     }
+  }
+
+  @include widescreen {
+    padding-top: 0;
   }
 }

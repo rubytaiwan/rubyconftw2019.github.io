@@ -2,6 +2,7 @@
 //= require jquery.easing
 //= require vender/bulma-modal.js
 //= require vender/in-view.min.js
+//= require vender/lazysizes.min.js
 
 document.addEventListener('DOMContentLoaded', function() {
 
@@ -96,7 +97,7 @@ document.addEventListener('DOMContentLoaded', function() {
   }
   $(window.location.hash).addClass('is-active');
 
-  // Show Modal when loaded
+  // Update URL with Modal
   $('[data-toggle="modal"]').click(function(){
      window.location.hash = $(this).attr('data-target');
   });
