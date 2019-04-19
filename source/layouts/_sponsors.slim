@@ -1,5 +1,13 @@
 .background-arch-header--white
 section.section.sponsors#sponsors-section.has-background-white
   .container
-    header.has-text-centered
-      h2.title.is-capitalized.has-text-primary Sponsors
+    header.has-text-centered.is-text-marmelad
+      h2.title.is-uppercase.has-text-primary Sponsors
+
+    .sponsors__cta.has-text-centered
+      em.is-size-4
+        | We are Calling for Sponsorship!
+        br
+        | Please check out the&nbsp;
+        = link_to 'Sponsor Deck', data.site.supportLink, target:'_blank', rel:'noopener', class:'has-text-primary has-text-weight-semibold'
+        | &nbsp;and help supporting us.

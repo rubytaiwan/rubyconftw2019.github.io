@@ -15,9 +15,13 @@ $size: (
   lg: 5rem,
 );
 
+// Font
+body {
+  font-family: "Ubuntu", BlinkMacSystemFont, -apple-system, "Segoe UI", "Roboto", "Oxygen", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", "Helvetica", "Arial", sans-serif !important;
+}
+
 // Text Custom helpers
-.is-text-noto   {font-family: 'Noto Sans TC', sans-serif;}
-.is-text-tenali {font-family: 'Tenali Ramakrishna', sans-serif;}
+.is-text-marmelad {font-family: 'Marmelad', sans-serif;}
 
 .has-text-pastel {
   color: $c-pastel;
