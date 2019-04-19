@@ -1,13 +1,43 @@
 .speakers {
 
+  &__block {
+    cursor: pointer;
+    transition: all 0.3s;
+
+    &:hover {
+      transform: translate3d(0, -5px, 0);
+    }
+  }
+
   &__avatar{
     max-width: 180px;
     margin: 0 auto;
   }
 
   &__cfp {
+    border-radius: 4px;
+    background: rgba($info, 0.1);
+    padding: 1.25rem;
+
     a {
       border-bottom: 1px solid $info;
+    }
+  }
+
+  &__modals {
+
+    .modal-card-head, .modal-card-foot {
+      border-width: 0;
+    }
+
+    .modal-card-head {
+      padding-bottom: 0;
+    }
+
+    .button.is-info {
+      &:hover, &:focus {
+        color: $primary;
+      }
     }
   }
 

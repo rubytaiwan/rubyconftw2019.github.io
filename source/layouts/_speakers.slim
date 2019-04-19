@@ -7,14 +7,31 @@ section.section.speakers#speakers-section.has-background-primary
       .columns.is-multiline.is-justified-center
         - data.speakers.each do |speaker|
           .column.is-half-tablet.is-one-third-desktop
-            figure.image.speakers__avatar
-              = image_tag( 'speakers/'+ speaker.avatar, alt: [data.site.title , speaker.name].compact.join(' - '), class:'is-rounded')
-            .speakers__info.has-text-centered.has-margin-top-sm.has-margin-bottom-sm
-              h4.has-text-info.has-text-weight-semibold.is-size-5 = speaker.name
-              p.has-text-grey-lighter = speaker.title
+            .speakers__block.modal-button[data-toggle='modal' data-target="#{speaker.name.parameterize}"]
+              figure.image.speakers__avatar
+                = image_tag( 'speakers/'+ speaker.avatar, data: { src: image_path('speakers/'+ speaker.avatar)}, alt: [data.site.title , speaker.name].compact.join(' - '), class:'lazyload is-rounded')
+              .speakers__info.has-text-centered.has-margin-top-sm.has-margin-bottom-sm
+                h4.has-text-info.has-text-weight-semibold.is-size-5 = speaker.name
+                p.has-text-grey-lighter = speaker.title
 
     .speakers__cfp.has-text-centered.has-margin-top-md.has-margin-top-lg-tablet
       em.has-text-info.is-size-4
         | &ldquo;&nbsp;We are Calling for Papers!&nbsp;
         = link_to 'Submit', data.site.cfpLink, target:'_blank', class:'has-text-info has-text-weight-semibold'
         | &nbsp;now to become one of our speakers.&nbsp;&rdquo;
+
+.speakers__modals
+  - data.speakers.each do |speaker|
+    .modal id="#{speaker.name.parameterize}"
+      .modal-background
+      .modal-card
+        .modal-card-head.is-justified-end.has-background-primary
+          button.delete[aria-label="close"]
+        .modal-card-body.has-background-primary.is-size-5-tablet
+          figure.image.speakers__avatar
+            = image_tag( 'speakers/'+ speaker.avatar, data: { src: image_path('speakers/'+ speaker.avatar)}, alt: [data.site.title , speaker.name].compact.join(' - '), class:'lazyload is-rounded')
+          .speakers__info.has-text-centered.has-margin-top-sm.has-margin-bottom-sm
+            h4.has-text-info.has-text-weight-semibold.is-size-5 = speaker.name
+            p.has-text-grey-lighter = speaker.title
+        .modal-card-foot.has-background-primary.is-justified-center
+          button.button.is-info.is-outlined.has-padding-width-md Close

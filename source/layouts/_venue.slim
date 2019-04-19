@@ -7,7 +7,7 @@ section.section.is-alt-section.venue#venue-section.is-paddingless
     .columns
       .column.is-flex.is-justified-center.is-aligned-center
         figure.image
-          = image_tag( 'mixins/venue.jpg', alt: data.site.eventLocation_cht + data.site.eventLocation_en)
+          = image_tag( 'mixins/venue.jpg', data: { src: image_path('mixins/venue.jpg')}, alt: data.site.eventLocation_cht + ' ' + data.site.eventLocation_en, class:'lazyload')
       .column.is-flex.is-aligned-center
         .venue__info
           .venue__location.has-text-primary.is-size-5
