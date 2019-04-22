@@ -50,7 +50,50 @@
       top: -760px;
       right: 10%;
       width: 480px;
+      
+      &__body {
+        animation: wobble-hor-bottom 1s both;
+      }
+
+      &__cap {
+        animation: pot-cap 1s both;
+        transform: rotate(30deg);
+      }
+
+      #main__ruby {
+        animation: slide-in-blurred-bottom 0.5s cubic-bezier(0.230, 1.000, 0.320, 1.000) 1s both;
+      }
+
+      #smoke {
+
+        &__left {
+
+          &--bottom {
+            animation: slide-in-br--80 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) 0.6s both;
+          }
+
+          &--top {
+            animation: slide-in-br--70 0.8s cubic-bezier(0.250, 0.460, 0.450, 0.940) 0.8s both;
+          }
+
+          &--middle {
+            animation: slide-in-br--65 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) 0.8s both;
+          }
+        }
+
+        &__right {
+
+          &--bottom {
+            animation: slide-in-bl--80 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) 0.6s both;
+          }
+
+          &--top {
+            animation: slide-in-bl--65 0.8s cubic-bezier(0.250, 0.460, 0.450, 0.940) 0.8s both;
+          }
+        }
+      }
     }
+
   }
 
   @include desktop {
@@ -59,6 +102,16 @@
   
       .background-arch-header--primary::before {
         top: 40%;
+      }
+    }
+  }
+
+  @include widescreen {
+
+    .hero-foot {
+  
+      .background-arch-header--primary::before {
+        top: 60%;
       }
     }
   }
