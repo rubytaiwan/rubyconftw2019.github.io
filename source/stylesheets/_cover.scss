@@ -1,7 +1,65 @@
 .cover {
-  overflow: hidden;
 
-  .title {
-    display: none;
+  .hero-foot {
+    position: relative;
+
+    .background-arch-header--primary {
+      padding-top: 40%;
+      margin-top: -30%;
+
+      &::before {
+        top: 20%;
+      }
+    }
+
+    .container {
+      position: absolute;
+      transform: translateX(-50%);
+      top: 0;
+      left: 50%;
+      width: 100%;
+    }
+  }
+
+  &__ic {
+
+    &__rice {
+      position: absolute;
+
+      &--left {
+        width: 100px;
+        top: -220px;
+        right: 70%;
+      }
+
+      &--middle {
+        width: 120px;
+        top: -80px;
+        right: 50%;
+      }
+
+      &--right {
+        width: 110px;
+        top: -120px;
+        right: 10%;
+      }
+    }
+
+    &__pot {
+      position: absolute;
+      top: -760px;
+      right: 10%;
+      width: 480px;
+    }
+  }
+
+  @include desktop {
+
+    .hero-foot {
+  
+      .background-arch-header--primary::before {
+        top: 40%;
+      }
+    }
   }
 }

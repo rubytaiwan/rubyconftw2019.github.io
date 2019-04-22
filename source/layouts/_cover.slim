@@ -1,10 +1,14 @@
 section.cover.hero.is-fullheight
   .hero-body
     .container
-      h1.title = data.site.title
+      h1.title.is-hidden = data.site.title
       figure.image
         = image_tag( 'mixins/main_logo.svg', alt: data.site.title)
       / = inline_svg('main_logo')
     
   .hero-foot
     .background-arch-header--primary
+    .container
+      - ['left', 'middle', 'right'].each do |item|
+        = image_tag( 'mixins/ic-rice.svg', alt: data.site.title, class:'is-hidden-mobile cover__ic__rice cover__ic__rice--'+ item)
+      = inline_svg('ic-pot')
