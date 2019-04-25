@@ -1,4 +1,49 @@
 .sponsors {
-  padding-top: 0;
-  padding-bottom: 0;
+  position: relative;
+  margin-top: 25%;
+  margin-bottom: 25%;
+  z-index: 2;
+
+  &::before { 
+    content: '';
+    position: absolute;
+    transform: translateY(-50%);
+    left: -6rem;
+    width: calc( 100% + 12rem);
+    padding-top: 40%;
+    background: white;
+    box-shadow: 0 0 10px 0 rgba($dark, 0.3);
+    border-radius: 100%;
+    z-index: -1;
+  }
+
+  &::after { 
+    content: '';
+    position: absolute;
+    transform: translateY(50%);
+    bottom: 0;
+    left: -6rem;
+    width: calc( 100% + 12rem);
+    padding-bottom: 40%;
+    background: white;
+    box-shadow: 0 8px 6px -6px rgba($dark, 0.3);
+    border-radius: 100%;
+    z-index: -1;
+  }
+
+  &__wrapper {
+    padding: 3rem 1.5rem;
+  }
+
+  @include tablet {
+    margin-top: 20%;
+    margin-bottom: 20%;   
+  }
+
+  @include desktop {
+
+    &__wrapper {
+      padding: 0 1.5rem;
+    }
+  }
 }

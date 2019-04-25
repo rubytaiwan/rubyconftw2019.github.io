@@ -1,10 +1,19 @@
 section.cover.hero.is-fullheight
   .hero-body
     .container
-      h1.title = data.site.title
-      figure.image
-        = image_tag( 'mixins/main_logo.svg', alt: data.site.title)
-      / = inline_svg('main_logo')
+      .cover__info.is-flex
+        h1.title.is-hidden = data.site.title
+        figure.image.has-text-centered.has-text-left-widescreen
+          = inline_svg('main_logo')
+        p.cover__info__date.has-text-primary.has-text-weight-semibold.is-text-marmelad.has-text-centered.has-text-left-widescreen.has-padding-width-md-widescreen.is-size-5.is-size-3-tablet
+          = data.site.eventDate
+          | &nbsp;@Taipei
+        .cover__info__cta.has-text-centered.has-text-left-widescreen.has-padding-width-md-widescreen.has-margin-top-sm
+          = link_to 'Call for Papers', data.site.cfpLink, target:'_blank', rel:"noopener", class:'button is-primary is-text-marmelad has-padding-width-sm is-size-5 is-size-4-tablet'
     
   .hero-foot
     .background-arch-header--primary
+    p.cover__info__location.has-text-info.has-text-right.is-hidden-mobile.is-pre-line.is-size-5.is-size-4-desktop = data.site.eventLocation
+    - ['left', 'middle', 'right'].each do |item|
+      = image_tag( 'mixins/ic-rice.svg', alt: data.site.title, class:'cover__ic__rice cover__ic__rice--'+ item)
+    = inline_svg('ic-pot')

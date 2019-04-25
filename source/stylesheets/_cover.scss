@@ -1,7 +1,243 @@
 .cover {
-  overflow: hidden;
 
-  .title {
-    display: none;
+  .hero-foot {
+    position: relative;
+
+    .background-arch-header--primary {
+      position: absolute;
+      width: 100%;
+      bottom: 0;
+      z-index: 1;
+
+      &::before {
+        top: 50%;
+      }
+    }
+  }
+
+  &__info {
+    flex-direction: column;
+
+    position: relative;
+    margin-bottom: 25vh;
+    z-index: 3;
+
+    &__date {
+      margin-top: -1rem;
+      animation: slide-in-bottom 0.8s 0.5s both;
+    }
+
+    &__cta {
+      animation: slide-in-bottom 0.8s 0.8s both;
+    }
+
+    .main__logo {
+      width: 150%;
+      height: auto;
+      transform: translateX(-18%);
+
+      &__icon {
+        display: none;
+        animation: slide-in-bottom 0.8s both;
+      }
+
+      &__type {
+        transform: translateX(-14%);
+
+        &--rubyconf {
+          animation: slide-in-bottom 0.8s both;
+        }
+
+        &--taiwan, &--year {
+          animation: slide-in-bottom 0.8s 0.25s both;
+        }
+      }
+    }
+  }
+
+  &__ic {
+
+    &__rice {
+      position: absolute;
+      width: 6vw;
+      z-index: 3;
+
+      &--left {
+        min-width: 65px;
+        max-width: 80px;
+        bottom: 2.5rem;
+        left: 5vw;
+      }
+
+      &--middle {
+        min-width: 70px;
+        max-width: 90px;
+        bottom: 0.75rem;
+        left: 15vw;
+      }
+
+      &--right {
+        min-width: 65px;
+        max-width: 85px;
+        bottom: 1rem;
+        left: 75vw;
+      }
+    }
+
+    &__pot {
+      position: absolute;
+      transform: translateX(-50%);
+      width: 100%;
+      height: auto;
+      max-width: 320px;
+      bottom: 1.5rem;
+      left: 50vw;
+      z-index: 2;
+
+      &__body {
+        animation: wobble-hor-bottom 1s both;
+      }
+
+      &__cap {
+        animation: pot-cap 1s both;
+        transform: rotate(30deg);
+      }
+
+      #main__ruby {
+        animation: slide-in-blurred-bottom 0.5s 1s both;
+      }
+
+      #smoke {
+
+        &__left {
+
+          &--bottom {
+            animation: slide-in-br--80 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) 0.6s both;
+          }
+
+          &--top {
+            animation: slide-in-br--70 0.8s cubic-bezier(0.250, 0.460, 0.450, 0.940) 0.8s both;
+          }
+
+          &--middle {
+            animation: slide-in-br--65 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) 0.8s both;
+          }
+        }
+
+        &__right {
+
+          &--bottom {
+            animation: slide-in-bl--80 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) 0.6s both;
+          }
+
+          &--top {
+            animation: slide-in-bl--65 0.8s cubic-bezier(0.250, 0.460, 0.450, 0.940) 0.8s both;
+          }
+        }
+      }
+    }
+  }
+
+  @include tablet {
+
+    .hero-body {
+      padding: 5rem 1.5rem;
+      min-height: 700px;
+    }
+
+    &__info {
+
+      .main__logo {
+        width: 100%;
+        max-width: 640px;
+        transform: translateX(0%);
+  
+        &__icon {
+          display: block;
+        }
+  
+        &__type {
+          transform: translateX(0%);
+        }
+      }
+  
+      &__date {
+        margin-top: 0;
+      }
+      
+      &__location {
+        position: absolute;
+        width: 50%;
+        bottom: 4vw;
+        left: 1.5rem;
+        padding-right: 1.5rem;
+        z-index: 2;
+      }
+    }
+
+    &__ic {
+
+      &__rice {
+
+        &--left {
+          bottom: 13vw;
+          left: 45vw;
+        }
+
+        &--middle {
+          bottom: 3vw;
+          left: 55vw;
+        }
+
+        &--right {
+          bottom: 5vw;
+          left: 86vw;
+        }
+      }
+
+      &__pot {
+        min-width: 400px;
+        width: 30vw;
+        max-width: 520px;
+        bottom: 8vw;
+        left: 70vw
+      }
+    }
+  }
+
+  @include desktop {
+
+    .hero-foot .background-arch-header--primary::before {
+      top: 60%;
+    }
+
+    &__info {
+      margin-bottom: 15vh;
+
+      .main__logo {
+        width: 60vw;
+        max-width: 720px;
+      }
+
+      &__location {
+        left: 0;
+        padding-right: 0;
+      }
+    }
+  }
+
+  @include fullhd {
+
+    .hero-foot .background-arch-header--primary::before {
+      top: 65%;
+    }
+
+    .hero-body {
+      min-height: 1000px;
+    }
+
+    &__info .main__logo {
+      max-width: 960px;
+    }
   }
 }

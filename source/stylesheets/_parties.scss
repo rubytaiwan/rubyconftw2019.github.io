@@ -35,7 +35,7 @@
   }
 
   &__footer {
-    padding: 1.5rem;
+    padding: 1rem;
 
     p {
       line-height: 2;
@@ -64,12 +64,15 @@
 
   @include tablet {
 
+    &__footer {
+      padding: 3rem 1rem;
+    }
+  }
+
+  @include desktop {
+
     &__cover {
       padding: 3rem;
-    }
-
-    &__footer {
-      padding: 3rem 1.5rem;
     }
   }
 }
