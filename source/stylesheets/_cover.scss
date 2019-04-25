@@ -6,9 +6,8 @@
     .background-arch-header--primary {
       position: absolute;
       width: 100%;
-      height: 100%;
-      padding-top: 40%;
       bottom: 0;
+      z-index: 1;
 
       &::before {
         top: 50%;
@@ -21,7 +20,7 @@
 
     position: relative;
     margin-bottom: 25vh;
-    z-index: 1;
+    z-index: 3;
 
     &__date {
       margin-top: -1rem;
@@ -61,7 +60,7 @@
     &__rice {
       position: absolute;
       width: 6vw;
-      z-index: 1;
+      z-index: 3;
 
       &--left {
         min-width: 65px;
@@ -93,6 +92,7 @@
       max-width: 320px;
       bottom: 1.5rem;
       left: 50vw;
+      z-index: 2;
 
       &__body {
         animation: wobble-hor-bottom 1s both;
@@ -171,6 +171,7 @@
         bottom: 4vw;
         left: 1.5rem;
         padding-right: 1.5rem;
+        z-index: 2;
       }
     }
 
@@ -229,6 +230,14 @@
 
     .hero-foot .background-arch-header--primary::before {
       top: 65%;
+    }
+
+    .hero-body {
+      min-height: 1000px;
+    }
+
+    &__info .main__logo {
+      max-width: 960px;
     }
   }
 }

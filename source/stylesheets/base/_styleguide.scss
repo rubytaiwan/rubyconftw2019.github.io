@@ -96,10 +96,12 @@ body {
 .background-arch-footer {
 
   &--white {
+    margin-top: -25%;
     @include background-arch(white, 0 0 50% 50%);
   }
 
   &--primary {
+    margin-top: -25%;
     @include background-arch($primary, 0 0 50% 50%);
   }
 }
