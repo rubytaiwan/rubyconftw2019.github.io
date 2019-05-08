@@ -16,8 +16,13 @@
 
   &__modals {
 
-    .modal-card-title span {
-      margin-top: 1rem;
+    .modal-card {
+      border: 10px solid $primary;
+      border-radius: 40px;
+    }
+
+    .modal-card-head, .modal-card-foot {
+      border: none;
     }
   }
 

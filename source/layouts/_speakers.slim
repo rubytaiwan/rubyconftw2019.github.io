@@ -27,14 +27,14 @@ section.section.speakers#speakers-section.has-background-primary
       .modal-card.has-background-primary
         .modal-card-head.is-justified-end.has-background-info
           button.delete[aria-label="close"]
-        .modal-card-body.has-background-info.is-size-5-tablet
+        .modal-card-body.has-background-info
           .columns.is-variable.is-8
             .column.speakers__modals__info.is-two-fifths
               figure.image.speakers__avatar
                 = image_tag speaker.avatar, data: { src: image_path(speaker.avatar)}, alt: [data.site.title , speaker.name].compact.join(' - '), class:'lazyload is-rounded'
               .speakers__info.has-text-centered.has-margin-top-sm.has-margin-bottom-md
                 h4.is-text-marmelad.has-text-primary.has-text-weight-semibold.is-size-5 = speaker.name
-                p.has-text-orange = speaker.title
+                p.is-title.has-text-orange = speaker.title
               .speakers__links.has-text-centered
                 - ['home', 'twitter', 'github'].each do |link|
                   - if speaker.instance_eval(link).present?

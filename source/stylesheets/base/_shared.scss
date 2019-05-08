@@ -172,6 +172,12 @@ header {
   .modal-card-body {
     word-break: break-word;
 
+    code {
+      border-radius: 4px;
+      background: rgba(whitesmoke, 0.7);
+      color: $primary;
+    }
+
     &.code-of-conduct p + p {
       margin-top: 1rem;
     }
