@@ -7,9 +7,9 @@ nav#navbar.navbar.is-fixed-top.is-transparent.is-shrink[role="navigation" aria-l
         span[aria-hidden="true"]
         span[aria-hidden="true"]
         span[aria-hidden="true"]
-    #mainNavbar.navbar-menu.has-text-centered
+    #mainNavbar.navbar-menu.has-text-centered.is-size-5.is-text-marmelad
       .navbar-end
         - ['News', 'Speakers', 'Venue', 'Schedule' ,'Parties', 'Sponsors'].each do |item|
           = link_to item, '#' + item.parameterize + '-section', class:'navbar-item', id: 'nav-' + item.parameterize
         .navbar-item
-          = link_to 'Call for Papers', data.site.cfpLink, target:'_blank', rel:"noopener", class:'button is-primary'
+          = link_to 'Call for Papers', data.site.cfpLink, target:'_blank', rel:"noopener", class:'button is-primary is-size-5'

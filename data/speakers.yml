@@ -1,16 +1,14 @@
 - name: 'Yukihiro Matsumoto (Matz)'
-  avatar: 'matz.jpg'
-  urltwitter: https://twitter.com/yukihiro_matz
-  urlGithub: https://github.com/matz
+  avatar: 'speakers/matz.jpg'
+  twitter: https://twitter.com/yukihiro_matz
+  github: https://github.com/matz
   title: 'Creator of Ruby, Heroku'
-  bio: |-
   subject: ''
   summary: |-
 - name: 'Yo-An Lin (C9S)'
-  avatar: 'c9s.jpg'
-  urlHome: https://about.me/c9s
-  urltwitter: https://twitter.com/c9s
+  avatar: 'speakers/c9s.jpg'
+  home: https://about.me/c9s
+  twitter: https://twitter.com/c9s
   title: 'UI, UX, Frontend, Backend Professional.'
-  bio: |-
-  subject:
+  subject: ''
   summary: |-

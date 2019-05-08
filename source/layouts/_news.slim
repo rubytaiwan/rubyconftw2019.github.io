@@ -27,14 +27,13 @@ section.section.news#news-section.has-background-primary
     - if post.slug ?
       .modal id="#{post.slug.parameterize}"
         .modal-background
-        .modal-card
-          .modal-card-head.is-aligned-start.has-background-white
-            p.modal-card-title
+        .modal-card.has-background-primary
+          .modal-card-head.has-background-primary.is-aligned-start
+            p.modal-card-title.has-text-white
               = post.title
               br
-              span.is-block.is-size-6.has-text-grey = format_date(post.date)
-            button.delete[aria-label="close"]
-          .modal-card-body.is-size-5-tablet
+              span.is-block.has-text-light.is-size-6.has-margin-top-sm = format_date(post.date)
+          .modal-card-body.has-background-info.is-size-5-tablet
             = markdown(post.content)
-          .modal-card-foot.has-background-white.is-justified-center
-            button.button.is-inverted.is-outlined.has-padding-width-md Close
+          .modal-card-foot.has-background-info.is-justified-center
+            button.button.is-primary.is-outlined.has-padding-width-md Close
