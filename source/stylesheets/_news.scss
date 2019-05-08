@@ -14,18 +14,6 @@
     }
   }
 
-  &__modals {
-
-    .modal-card {
-      border: 10px solid $primary;
-      border-radius: 40px;
-    }
-
-    .modal-card-head, .modal-card-foot {
-      border: none;
-    }
-  }
-
   #news-more {
     transition: all 0.3s;
 

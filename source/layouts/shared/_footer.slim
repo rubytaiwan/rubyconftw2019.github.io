@@ -26,47 +26,36 @@ footer.footer.has-background-primary
 
   .modal#code-of-conduct
     .modal-background
-    .modal-card
-      .modal-card-head
-        p.modal-card-title Code of Conduct
-        button.delete[aria-label="close"]
-      .modal-card-body.code-of-conduct
+    .modal-card.has-background-primary
+      .modal-card-head.has-background-primary
+        p.modal-card-title.has-text-white.has-text-centered Code of Conduct
+      .modal-card-body.code-of-conduct.has-background-info
         = markdown(data.site.coc)
-      .modal-card-foot.is-justified-center
-        button.button.is-inverted.is-outlined.has-padding-width-md Close
+      .modal-card-foot.has-background-info.is-justified-center
+        button.button.is-primary.is-outlined.has-padding-width-md Close
 
   .modal#team-members
     .modal-background
-    .modal-card
-      .modal-card-head
-        p.modal-card-title Team Members
-        button.delete[aria-label="close"]
-      .modal-card-body
+    .modal-card.has-background-primary
+      .modal-card-head.has-background-primary
+        p.modal-card-title.has-text-white.has-text-centered Team Members
+      .modal-card-body.has-background-info
         .columns.is-multiline.has-text-centered
           - data.site.teamMember.each do |member|
             .column.is-one-third
-              p.member__name.has-text-weight-semibold.is-size-5 = member.name
-              p.member__title.has-text-grey = member.title
+              p.has-text-primary.has-text-weight-semibold.is-size-5 = member.name
+              p.has-text-orange = member.title
+              .member__socials.has-text-centered
+                - ['home', 'twitter', 'github'].each do |link|
+                  - if member.instance_eval(link).present?
+                    = link_to member.instance_eval(link), target: '_blank', class: 'has-text-primary' do
+                      span.icon.is-large
+                        span.fa-stack
+                          i.far.fa-circle.fa-stack-2x
+                          i.fa-stack-1x class="#{ link == 'home' ? 'fas fa-' + link : 'fab fa-' + link }"
 
-              ul.member__socials
-                - if member.urlHome
-                  li.is-inline-block
-                    = link_to member.urlHome, target: '_blank', rel:'noopener noreferrer', class:'has-text-grey-lighter' do
-                      span.icon.is-medium
-                        i.fas.fa-home.fa-lg
-                - if member.urltwitter
-                  li.is-inline-block
-                    = link_to member.urltwitter, target: '_blank', rel:'noopener noreferrer', class:'has-text-grey-lighter' do
-                      span.icon.is-medium
-                        i.fab.fa-twitter.fa-lg
-                - if member.urlGithub
-                  li.is-inline-block
-                    = link_to member.urlGithub, target: '_blank', rel:'noopener noreferrer', class:'has-text-grey-lighter' do
-                      span.icon.is-medium
-                        i.fab.fa-github.fa-lg
-
-      .modal-card-foot.is-justified-center
-        button.button.is-inverted.is-outlined.has-padding-width-md Close
+      .modal-card-foot.has-background-info.is-justified-center
+        button.button.is-primary.is-outlined.has-padding-width-md Close
 
 .scrollup
   a href="#"

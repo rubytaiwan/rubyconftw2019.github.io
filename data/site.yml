@@ -46,29 +46,29 @@ parties:
 teamMember:
   - name: 'Mu-Fan Teng'
     title: 'Chief Organizer'
-    urltwitter: https://twitter.com/ryudoawaru
-    urlGithub: https://github.com/ryudoawaru
+    twitter: https://twitter.com/ryudoawaru
+    github: https://github.com/ryudoawaru
   - name: 'Sabrina Chiang'
     title: 'Organizer'
-    urltwitter: https://twitter.com/sabrina_chiang
+    twitter: https://twitter.com/sabrina_chiang
   - name: 'Tse-Hau Chao'
     title: 'Organizer'
-    urltwitter: https://twitter.com/thchao
-    urlGithub: https://github.com/jodeci
+    twitter: https://twitter.com/thchao
+    github: https://github.com/jodeci
   - name: 'Chien-Lung Kao'
     title: 'Organizer'
-    urlHome: https://kaochenlong.com/
-    urltwitter: https://twitter.com/eddiekao
-    urlGithub: https://github.com/kaochenlong
+    home: https://kaochenlong.com/
+    twitter: https://twitter.com/eddiekao
+    github: https://github.com/kaochenlong
   - name: 'Keddie Huang'
     title: 'Event Producer'
-    urltwitter: https://twitter.com/Huang_Keddie
-  - name: 'Chia-Hui Yeh'
-    title: 'Event Producer & VI Designer'
+    twitter: https://twitter.com/Huang_Keddie
   - name: 'Irene Chang'
     title: 'Web Developer'
-    urltwitter: https://twitter.com/irene841111
-    urlGithub: https://github.com/irene84111
+    twitter: https://twitter.com/irene841111
+    github: https://github.com/irene84111
+  - name: 'Chia-Hui Yeh'
+    title: 'Event Producer & VI Designer'
 
 coc: |-
   All attendees, speakers, sponsors and volunteers at our conference are required to agree to follow the Code of Conduct. Organizers will enforce this Code of Conduct throughout the event. We are expecting cooperation from all participants to help ensure a safe environment for everybody.

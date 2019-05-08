@@ -11,11 +11,11 @@ section.section.speakers#speakers-section.has-background-primary
               figure.image.speakers__avatar
                 = image_tag speaker.avatar, data: { src: image_path(speaker.avatar)}, alt: [data.site.title , speaker.name].compact.join(' - '), class:'lazyload is-rounded'
               .speakers__info.has-text-centered.has-margin-top-sm.has-margin-bottom-sm
-                h4.has-text-info.has-text-weight-semibold.is-size-5 = speaker.name
+                h4.is-text-marmelad.has-text-info.has-text-weight-semibold.is-size-5 = speaker.name
                 p.has-text-grey-lighter = speaker.title
 
     .speakers__cfp.has-text-centered.has-margin-top-md.has-margin-top-lg-tablet
-      em.has-text-info.is-size-4
+      em.has-text-info.is-size-5.is-size-4-tablet
         | We are Calling for Papers!&nbsp;
         = link_to 'Submit', data.site.cfpLink, target:'_blank', rel:'noopener',class:'has-text-info has-text-weight-semibold'
         | &nbsp;now to become one of our speakers.
