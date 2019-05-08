@@ -60,6 +60,11 @@ header {
   transition: all 0.3s ease-out;
   box-shadow: 0 2px 8px 0 rgba(51,51,51,0.2);
 
+  .navbar-menu {
+    padding: 1rem 0;
+    box-shadow: none;
+  }
+
   .navbar-item {
 
     &.is-active {
@@ -90,6 +95,12 @@ header {
     background-color: transparent;
     box-shadow: none;
     padding: 1rem;
+  }
+
+  @include desktop {
+    .navbar-menu {
+      padding: 0.5rem 0;
+    }
   }
 }
 
