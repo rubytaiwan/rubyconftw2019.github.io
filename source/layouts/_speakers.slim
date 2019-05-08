@@ -9,7 +9,7 @@ section.section.speakers#speakers-section.has-background-primary
           .column.is-half-tablet.is-one-third-desktop
             .speakers__block.modal-button[data-toggle='modal' data-target="#{speaker.name.parameterize}"]
               figure.image.speakers__avatar
-                = image_tag( 'speakers/'+ speaker.avatar, data: { src: image_path('speakers/'+ speaker.avatar)}, alt: [data.site.title , speaker.name].compact.join(' - '), class:'lazyload is-rounded')
+                = image_tag speaker.avatar, data: { src: image_path(speaker.avatar)}, alt: [data.site.title , speaker.name].compact.join(' - '), class:'lazyload is-rounded'
               .speakers__info.has-text-centered.has-margin-top-sm.has-margin-bottom-sm
                 h4.has-text-info.has-text-weight-semibold.is-size-5 = speaker.name
                 p.has-text-grey-lighter = speaker.title
@@ -24,14 +24,28 @@ section.section.speakers#speakers-section.has-background-primary
   - data.speakers.each do |speaker|
     .modal id="#{speaker.name.parameterize}"
       .modal-background
-      .modal-card
-        .modal-card-head.is-justified-end.has-background-primary
+      .modal-card.has-background-primary
+        .modal-card-head.is-justified-end.has-background-info
           button.delete[aria-label="close"]
-        .modal-card-body.has-background-primary.is-size-5-tablet
-          figure.image.speakers__avatar
-            = image_tag( 'speakers/'+ speaker.avatar, data: { src: image_path('speakers/'+ speaker.avatar)}, alt: [data.site.title , speaker.name].compact.join(' - '), class:'lazyload is-rounded')
-          .speakers__info.has-text-centered.has-margin-top-sm.has-margin-bottom-sm
-            h4.has-text-info.has-text-weight-semibold.is-size-5 = speaker.name
-            p.has-text-grey-lighter = speaker.title
-        .modal-card-foot.has-background-primary.is-justified-center
-          button.button.is-info.is-outlined.has-padding-width-md Close
+        .modal-card-body.has-background-info.is-size-5-tablet
+          .columns.is-variable.is-8
+            .column.speakers__modals__info.is-two-fifths
+              figure.image.speakers__avatar
+                = image_tag speaker.avatar, data: { src: image_path(speaker.avatar)}, alt: [data.site.title , speaker.name].compact.join(' - '), class:'lazyload is-rounded'
+              .speakers__info.has-text-centered.has-margin-top-sm.has-margin-bottom-md
+                h4.is-text-marmelad.has-text-primary.has-text-weight-semibold.is-size-5 = speaker.name
+                p.has-text-orange = speaker.title
+              .speakers__links.has-text-centered
+                - ['home', 'twitter', 'github'].each do |link|
+                  - if speaker.instance_eval(link).present?
+                    = link_to speaker.instance_eval(link), target: '_blank', class: 'has-text-primary' do
+                      span.icon.is-large
+                        span.fa-stack
+                          i.fas.fa-circle.fa-stack-2x
+                          i.fa-stack-1x.fa-inverse class="#{ link == 'home' ? 'fas fa-' + link : 'fab fa-' + link }"
+
+            .column.speakers__modals__talk.is-flex.has-text-centered
+              h3.is-text-marmelad.has-text-orange.is-size-4 = speaker.subject
+              = image_tag 'mixins/ic-deco.svg', alt: data.site.title, class: 'has-margin-top-sm has-margin-bottom-sm'
+              .speakers__summary.has-text-left.has-padding-width-sm-desktop
+                = markdown(speaker.summary)
