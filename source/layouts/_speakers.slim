@@ -45,7 +45,7 @@ section.section.speakers#speakers-section.has-background-primary
                           i.fa-stack-1x.fa-inverse class="#{ link == 'home' ? 'fas fa-' + link : 'fab fa-' + link }"
 
             .column.speakers__modals__talk.is-flex.has-text-centered
-              h3.is-text-marmelad.has-text-orange.is-size-4 = speaker.subject
+              h3.is-text-marmelad.has-text-orange.has-text-weight-semibold.is-size-4 = speaker.subject
               = image_tag 'mixins/ic-deco.svg', alt: data.site.title, class: 'has-margin-top-sm has-margin-bottom-sm'
-              .speakers__summary.has-text-left.has-padding-width-sm-desktop
+              .speakers__summary.has-text-left.has-padding-width-sm-tablet
                 = markdown(speaker.summary)
