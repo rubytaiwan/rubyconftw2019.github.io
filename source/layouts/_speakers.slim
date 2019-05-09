@@ -1,6 +1,6 @@
 section.section.speakers#speakers-section.has-background-primary
   .container
-    header.has-text-centered.is-text-marmelad
+    header.has-text-centered.is-text-alt
       h2.title.is-uppercase.has-text-white Speakers
 
     .speakers__list.has-margin-top-lg
@@ -11,7 +11,7 @@ section.section.speakers#speakers-section.has-background-primary
               figure.image.speakers__avatar
                 = image_tag speaker.avatar, data: { src: image_path(speaker.avatar)}, alt: [data.site.title , speaker.name].compact.join(' - '), class:'lazyload is-rounded'
               .speakers__info.has-text-centered.has-margin-top-sm.has-margin-bottom-sm
-                h4.is-text-marmelad.has-text-info.has-text-weight-semibold.is-size-5 = speaker.name
+                h4.is-text-alt.has-text-info.has-text-weight-semibold.is-size-5 = speaker.name
                 p.has-text-grey-lighter = speaker.title
 
     .speakers__cfp.has-text-centered.has-margin-top-md.has-margin-top-lg-tablet
@@ -33,7 +33,7 @@ section.section.speakers#speakers-section.has-background-primary
               figure.image.speakers__avatar
                 = image_tag speaker.avatar, data: { src: image_path(speaker.avatar)}, alt: [data.site.title , speaker.name].compact.join(' - '), class:'lazyload is-rounded'
               .speakers__info.has-text-centered.has-margin-top-sm.has-margin-bottom-md
-                h4.is-text-marmelad.has-text-primary.has-text-weight-semibold.is-size-5 = speaker.name
+                h4.is-text-alt.has-text-primary.has-text-weight-semibold.is-size-5 = speaker.name
                 p.is-title.has-text-orange = speaker.title
               .speakers__links.has-text-centered
                 - ['home', 'twitter', 'github'].each do |link|
@@ -45,7 +45,7 @@ section.section.speakers#speakers-section.has-background-primary
                           i.fa-stack-1x.fa-inverse class="#{ link == 'home' ? 'fas fa-' + link : 'fab fa-' + link }"
 
             .column.speakers__modals__talk.is-flex.has-text-centered
-              h3.is-text-marmelad.has-text-orange.has-text-weight-semibold.is-size-4 = speaker.subject
+              h3.is-text-alt.has-text-orange.has-text-weight-semibold.is-size-4 = speaker.subject
               = image_tag 'mixins/ic-deco.svg', alt: data.site.title, class: 'has-margin-top-sm has-margin-bottom-sm'
               .speakers__summary.has-text-left.has-padding-width-sm-tablet
                 = markdown(speaker.summary)
