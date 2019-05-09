@@ -22,9 +22,17 @@
     }
   }
 
+  &__topic {
+    line-height: 1.2;
+  }
+
   &__summary {
     height: 100%;
     overflow-y: scroll;
+  }
+
+  &__deco {
+    margin: 1rem 0;
   }
 
   &__modals {
@@ -97,7 +105,7 @@
       }
   
       &__info {
-        border-right: 1px solid $primary;
+        border-right: 1px solid rgba($primary, 0.2);
       }
     }
   }
