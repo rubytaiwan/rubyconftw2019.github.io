@@ -1,0 +1,17 @@
+platinum:
+  - name: 'Crypto.com | Cryptocurrency in Every Wallet™'
+    logo: 'crypto.svg'
+    link: https://www.crypto.com/
+  - name: 'SHOPLINE'
+    logo: 'shopline.svg'
+    link: https://shopline.tw/
+
+silver:
+  - name: '5FPRO 伍樓專業'
+    logo: '5fpro.svg'
+    link: https://5fpro.com/
+
+partner:
+  - name: '五倍紅寶石股份有限公司'
+    logo: '5xruby.svg'
+    link: https://5xruby.tw/

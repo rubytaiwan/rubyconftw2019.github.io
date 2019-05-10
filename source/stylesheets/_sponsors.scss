@@ -4,10 +4,10 @@
   margin-bottom: 25%;
   z-index: 2;
 
-  &::before { 
+  &::before {
     content: '';
     position: absolute;
-    transform: translateY(-50%);
+    transform: translateY(-45%);
     left: -6rem;
     width: calc( 100% + 12rem);
     padding-top: 40%;
@@ -17,10 +17,10 @@
     z-index: -1;
   }
 
-  &::after { 
+  &::after {
     content: '';
     position: absolute;
-    transform: translateY(50%);
+    transform: translateY(45%);
     bottom: 0;
     left: -6rem;
     width: calc( 100% + 12rem);
@@ -35,15 +35,54 @@
     padding: 3rem 1.5rem;
   }
 
+  &__logo {
+    text-align: center;
+
+    &--platinum {
+      max-width: 280px;
+    }
+
+    &--silver, &--partner {
+      max-width: 240px;
+    }
+  }
+
   @include tablet {
     margin-top: 20%;
-    margin-bottom: 20%;   
+    margin-bottom: 20%;
+
+    &__logo {
+      text-align: center;
+
+      &--platinum {
+        max-width: 360px;
+      }
+
+      &--silver, &--partner {
+        max-width: 280px;
+      }
+    }
   }
 
   @include desktop {
 
     &__wrapper {
       padding: 0 1.5rem;
+
+      .column {
+        padding: 1.5rem;
+      }
+    }
+  }
+
+  @include widescreen {
+
+    &::before {
+      transform: translateY(-40%);
+    }
+  
+    &::after {
+      transform: translateY(40%);
     }
   }
 }
