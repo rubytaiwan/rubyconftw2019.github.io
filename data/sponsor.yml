@@ -2,16 +2,35 @@ platinum:
   - name: 'Crypto.com | Cryptocurrency in Every Wallet™'
     logo: 'crypto.svg'
     link: https://www.crypto.com/
+    desc: |-
+      Crypto.com, the pioneering payments and cryptocurrency platform, formerly known as Monaco, seeks to accelerate the world’s transition to cryptocurrency. Its MCO branded consumer financial services, including the MCO Visa Card, MCO Wallet app, and MCO Token embrace a vision of Cryptocurrency in Every Wallet™.
+
+      Crypto.com is headquartered in Hong Kong and it is redefining how money is being moved, spent and invested. MCO is democratizing blockchain technology by designing beautiful, simple and useful financial services that have a lasting, positive impact on people’s lives.
   - name: 'SHOPLINE'
     logo: 'shopline.svg'
     link: https://shopline.tw/
+    desc: |-
+      SHOPLINE 全球智慧開店平台，我們的願景是以客戶為優先，讓不同規模的品牌都能扎根本地，成功銷售到世界各地，實現全通路零售，目前全球有超過15萬個品牌都在使用 SHOPLINE 開店。
+  - name: 'OSP - Otto Software Partner Taipei'
+    logo: 'osp.svg'
+    link: http://www.osp.com.tw/
+    desc: |-
+      OSP 甌圖軟體開發股份有限公司於 1991 年創立，為 Otto Group 奧托集團旗下的子公司。擁有超過 300 位員工，分布在德國德勒斯登、台北、漢堡、阿爾滕昆斯塔特、馬德里和曼谷，而甌圖軟體負責替全通路零售、電子商務和商業智能開發專有的解決方案。
+
+      除了廣泛的客製化 IT 服務，像是軟體開發、系統架構諮詢外，還透過 MOVEX 軟體提供電商和物流靈活的後端整合功能，包含銷售和需求規劃到訂單、倉儲管理和出貨流程，行動商務也使全通路的解決方案更加完整。
 
 silver:
   - name: '5FPRO 伍樓專業'
     logo: '5fpro.svg'
     link: https://5fpro.com/
+    desc: |-
+      以 Web Development 為主要業務的軟體公司，透過網路技術的力量來創造社會價值。
 
 partner:
   - name: '五倍紅寶石股份有限公司'
     logo: '5xruby.svg'
     link: https://5xruby.tw/
+    desc: |-
+      我們是一群在台灣的 Ruby 程式語言的愛好者，每天的工作都是跟 Ruby/Rails 相關。Ruby on Rails 快速開發的優勢，在國外企業與創業圈極為熱門；而 Ruby 語言本身的自然與優雅簡潔，也讓工程師們工作起來更加快樂。但是，在台灣實際真的有使用 Ruby/Rails 做為主要開發工具的企業卻仍是少數。
+
+      我們最終的目的，是希望在台灣可以有越來越多的企業能了解或採用 Ruby 這個優雅、有趣，並且極具生產力的程式語言做為主要開發工具，更快速的實現您的想法。
