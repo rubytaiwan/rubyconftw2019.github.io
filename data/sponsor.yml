@@ -25,6 +25,11 @@ silver:
     link: https://5fpro.com/
     desc: |-
       以 Web Development 為主要業務的軟體公司，透過網路技術的力量來創造社會價值。
+  - name: '愛好資訊科技有限公司'
+    logo: 'aihao.svg'
+    link: https://aihao.tw
+    desc: |-
+      愛好資訊科技提供軟體開發、網站營運、電商系統等顧問服務。深度了解客戶企業資訊流，持續交付得到用戶回饋，產出真正有價值的可用軟體。
 
 partner:
   - name: '五倍紅寶石股份有限公司'
