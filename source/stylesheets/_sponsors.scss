@@ -78,11 +78,11 @@
   @include widescreen {
 
     &::before {
-      transform: translateY(-40%);
+      transform: translateY(-42%);
     }
   
     &::after {
-      transform: translateY(40%);
+      transform: translateY(42%);
     }
   }
 }
