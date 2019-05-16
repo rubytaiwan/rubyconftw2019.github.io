@@ -4,4 +4,164 @@
     padding-top: 2rem !important;
     padding-bottom: 2rem !important;
   }
+
+  &__table {
+
+    .tab-content {
+      border-top: 2px solid $primary;
+      border-bottom: 2px solid $primary;
+    }
+
+    .column {
+      padding-top: 1.5rem;
+      padding-bottom: 1.5rem;
+
+      &.period {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-bottom: 1px dotted rgba($primary, 0.1) !important;
+      }
+    }
+
+    &__tabs {
+
+      ul {
+        flex-direction: column;
+      }
+      
+      .tab {
+        width: 100%;
+
+        a {
+          padding: 1.25rem;
+          color: $primary;
+          border-width: 2px;
+
+          &:hover {
+            color: $info;
+          }
+        }
+
+        + .tab {
+          margin-top: 0.5rem;
+        }
+      }
+    }
+
+    &__header {
+      border-top: 2px solid $primary;
+      border-bottom: 2px solid $primary;
+
+      .column {
+        border-right: 1px solid rgba($primary, 0.1);
+
+        &:last-child {
+          border-right: none;
+        }
+      }
+    }
+
+    &__body {
+
+      .columns {
+
+        border-bottom: 1px solid rgba($primary, 0.5);
+
+        &:nth-child(even) {
+          background: rgba($primary, 0.05);
+        }
+
+        &:last-child {
+          border-top: 2px solid $primary;
+        }
+
+        &.break {
+          background: rgba(#fff, 0.15);
+        }
+
+        &.session {
+
+          .column {
+            padding-top: 2rem;
+            padding-bottom: 2rem;
+            border-bottom: 1px solid rgba(#fff, 0.3);
+
+            &:last-child {
+              border: none;
+            }
+
+            &.modal-button {
+              cursor: pointer;
+            }
+
+            &.talks:hover {
+              cursor: pointer;
+              background: rgba($primary, 0.15);
+            }
+          }
+        }
+
+        .topic {
+          margin-top: 0.75rem;
+        }
+      }
+    }
+  }
+
+  @include tablet {
+
+    &__table {
+
+      .tab-content {
+        border-top: none;
+      }
+  
+      .column {
+        padding-top: 1.75rem;
+        padding-bottom: 1.75rem;
+      }
+
+      &__tabs {
+
+        ul {
+          flex-direction: row;
+        }
+        
+        .tab {
+          width: 50%;
+  
+          + .tab {
+            margin-top: 0;
+          }
+        }
+      }
+
+      &__body {
+
+        .columns.session .column {
+          border-bottom: none;
+          border-right: 1px dotted rgba($primary, 0.1);
+        }
+      }
+    }
+  }
+
+  @include desktop {
+
+    &__table {
+
+      .column.period {
+        border-bottom: none;
+        border-right: 1px solid rgba($primary, 0.25) !important;
+      }
+
+      &__body {
+
+        .columns {
+          border-bottom: none;
+        }
+      }
+    }
+  }
 }

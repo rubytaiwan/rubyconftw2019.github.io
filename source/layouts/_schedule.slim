@@ -3,5 +3,58 @@ section.section.is-alt-section.schedule#schedule-section.is-paddingless
     header.has-text-centered.is-text-alt
       h2.title.is-uppercase.has-text-primary Schedule
 
-    p.has-text-centered.is-text-alt.is-size-4
-      em Coming Soon
+    .schedule__table.has-text-centered.is-size-5
+
+      .schedule__table__tabs.tabs.is-toggle.is-medium.is-text-alt.has-text-weight-semibold
+        ul
+          li.tab[data-tab="dayOne"]
+            a Day 1 @ Fri, Jul. 26
+          li.tab[data-tab="dayTwo"]
+            a Day 2 @ Sat, Jul. 27
+
+      .schedule__table__header.is-hidden-mobile.is-text-alt.has-text-primary.has-text-weight-semibold
+        .columns.is-marginless
+          .column.is-2.is-hidden-touch
+          .column
+            p 1001 Auditorium
+          .column
+            p 1002 Auditorium
+          .column
+            p 1003 Auditorium
+
+      .schedule__table__body
+
+        - data.schedule.each_with_index do |day, index|
+          div.tab-content id="#{day[0]}" class="#{index == 0 ? 'is-active' : ''}"
+            - day[1].each do |item|
+              - if item.type == 'event'
+                .columns.is-multiline.is-marginless class="#{item.agenda == 'Break' ? 'break' : ''}"
+                  .column.period.is-text-alt.is-12-tablet.is-2-desktop
+                    p = item.period
+                  .column
+                    .agenda.is-uppercase = item.agenda
+              - else
+                .columns.session.is-multiline.is-marginless
+                  .column.period.is-text-alt.is-12-tablet.is-2-desktop
+                    p = item.period
+                  
+                  - if item.session.present?
+                    - item.session.each.with_index(1) do |topic, index|
+                      - find_speaker_by(topic) do |speaker|
+
+                        - if speaker.present?
+                          .column.talks.modal-button[data-toggle='modal' data-target="#{topic.parameterize}"]
+                            span.venue.tag.is-primary.is-medium.has-margin-bottom-sm.is-hidden-tablet 100#{index}
+                            figure.image.speakers__avatar.is-96x96
+                              = image_tag speaker.avatar, data: { src: image_path(speaker.avatar)}, alt: [data.site.title , speaker.avatar].compact.join(' - '), class:'lazyload is-rounded'
+                            .topic.is-text-alt.has-text-primary.has-text-weight-semibold.is-size-4 = speaker.subject
+                            .speaker.is-size-6 = speaker.name
+
+                        - else
+                          .column
+                            p.has-text-danger Typing Error
+
+
+                  - else 
+                    .column
+                      p.is-italic.has-text-grey TBD

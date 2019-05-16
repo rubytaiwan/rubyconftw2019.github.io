@@ -101,4 +101,24 @@ document.addEventListener('DOMContentLoaded', function() {
   $('[data-toggle="modal"]').click(function(){
      window.location.hash = $(this).attr('data-target');
   });
+
+  // Tabs for Schedule
+  $(function(){
+    var _showTab = 0;
+    var $tab = $(this); 
+    var $defaultLi = $('.tabs li', $tab).eq(_showTab).addClass('is-active');
+    
+    $("#" + $defaultLi.attr("data-tab")).siblings().hide();
+  
+    $('.tabs li', $tab).click(function() {
+
+      var $this = $(this),
+          _target = $this.attr("data-tab");
+
+      $this.addClass('is-active').siblings('.is-active').removeClass('is-active');
+
+      $("#" + _target).show().siblings().hide();
+    });
+  });
+
 });

@@ -1,11 +1,11 @@
 .news {
 
   &__list {
-    border-top: 3px solid #A53F20;
+    border-top: 3px solid $c-chrome;
   }
 
   &__item {
-    border-bottom: 3px solid #A53F20;
+    border-bottom: 3px solid $c-chrome;
     padding: 1.75rem 0.5rem;
     cursor: pointer;
 

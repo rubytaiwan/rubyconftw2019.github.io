@@ -1,0 +1,127 @@
+dayOne:
+
+  - period: 9:00 am
+    type: event
+    agenda: Registration
+
+  - period: 10:00 am
+    type: event
+    agenda: Opening
+
+  - period: 10:10 am
+    session:
+      - 'Yukihiro Matsumoto (Matz)'
+
+  - period: 11:10 am
+    type: event
+    agenda: Break
+
+  - period: 11:20 am
+    session:
+
+  - period: 12:00 pm
+    type: event
+    agenda: Lunch
+
+  - period: 1:30 pm
+    session:
+
+  - period: 2:10 pm
+    type: event
+    agenda: Break
+
+  - period: 2:20 pm
+    session:
+
+  - period: 3:00 pm
+    type: event
+    agenda: Tea Break
+
+  - period: 3:30 pm
+    session:
+
+  - period: 4:10 pm
+    type: event
+    agenda: Break
+
+  - period: 4:20 pm
+    session:
+
+  - period: 5:00 pm
+    type: event
+    agenda: Break
+
+  - period: 5:10 pm
+    session:
+      - 'Yo-An Lin (C9S)'
+
+  - period: 6:10 pm
+    type: event
+    agenda: Break
+
+  - period: 6:30 pm
+    type: event
+    agenda: Official Party
+
+dayTwo:
+
+  - period: 9:00 am
+    type: event
+    agenda: Registration
+
+  - period: 10:00 am
+    type: event
+    agenda: Opening
+
+  - period: 10:10 am
+    session:
+
+  - period: 11:10 am
+    type: event
+    agenda: Break
+
+  - period: 11:20 am
+    session:
+
+  - period: 12:00 pm
+    type: event
+    agenda: Lunch
+
+  - period: 1:30 pm
+    session:
+
+  - period: 2:10 pm
+    type: event
+    agenda: Break
+
+  - period: 2:20 pm
+    session:
+
+  - period: 3:00 pm
+    type: event
+    agenda: Tea Break
+
+  - period: 3:30 pm
+    session:
+
+  - period: 4:10 pm
+    type: event
+    agenda: Break
+
+  - period: 4:20 pm
+    session:
+
+  - period: 5:00 pm
+    type: event
+    agenda: Break
+
+  - period: 5:10 pm
+    session:
+
+  - period: 6:10 pm
+    type: event
+    agenda: Break
+
+  - period: 6:30 pm
+    type: event
+    agenda: Closing

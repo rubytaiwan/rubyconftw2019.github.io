@@ -27,6 +27,15 @@ $modal-card-spacing: 64px;
 $modal-card-head-padding: 1.5rem;
 $modal-card-body-padding: 1.5rem;
 
+// Components/Tabs
+$tabs-toggle-link-radius: 0;
+$tabs-toggle-link-border-color: $primary;
+$tabs-toggle-link-hover-background-color: $primary;
+$tabs-toggle-link-hover-border-color: $primary;
+$tabs-toggle-link-active-background-color: $primary;
+$tabs-toggle-link-active-border-color: $primary;
+$tabs-toggle-link-active-color: $info;
+
 @import "bulma";
 
 @import "base/mixin";
