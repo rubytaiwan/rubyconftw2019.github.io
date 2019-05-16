@@ -14,7 +14,7 @@ section.section.is-alt-section.parties#parties-section.is-paddingless
             .parties__footer.has-background-primary.has-text-pastel.has-text-centered.has-text-weight-semibold.is-size-5
 
               span.icon.is-medium
-                i.fas.fa-certificate
+                = image_tag('mixins/ic-pastel.svg')
 
               - if party.datetime?
                 p.parties__datetime = party.datetime
@@ -22,12 +22,12 @@ section.section.is-alt-section.parties#parties-section.is-paddingless
                   span.icon
                     i.fas.fa-map-marker-alt
                   | &nbsp;
-                  = link_to party.location, party.locationLink, target: '_blank', rel:'noopener noreferrer', class:"has-text-info"
+                  = link_to party.location, party.locationLink, target:'_blank', rel:'noopener', class:"has-text-info"
 
                 button.button.parties__btn.is-outlined.is-info.is-medium[disabled=""] = party.cfaBtn
               
               - else
-                span.is-text-alt.is-size-4.has-padding-width-sm Coming Soon
+                span.is-text-alt.is-size-4.has-padding-width-sm[style="vertical-align:bottom;"] COMING SOON
 
               span.icon.is-medium
-                i.fas.fa-certificate
+                = image_tag('mixins/ic-pastel.svg')
