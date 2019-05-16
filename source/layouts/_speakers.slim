@@ -17,7 +17,7 @@ section.section.speakers#speakers-section.has-background-primary
     .speakers__cfp.has-text-centered.has-margin-top-md.has-margin-top-lg-tablet
       em.has-text-info.is-size-5.is-size-4-tablet
         | We are Calling for Papers!&nbsp;
-        = link_to 'Submit', data.site.cfpLink, target:'_blank', rel:'noopener',class:'has-text-info has-text-weight-semibold'
+        = link_to 'Submit', data.site.cfpLink, target:'_blank', rel:'noopener', class:'has-text-info has-text-weight-semibold'
         | &nbsp;now to become one of our speakers.
 
 .speakers__modals
@@ -38,7 +38,7 @@ section.section.speakers#speakers-section.has-background-primary
               .speakers__links.has-text-centered
                 - ['home', 'twitter', 'github'].each do |link|
                   - if speaker.instance_eval(link).present?
-                    = link_to speaker.instance_eval(link), target: '_blank', class: 'has-text-primary' do
+                    = link_to speaker.instance_eval(link), target:'_blank', rel:'noopener', class: 'has-text-primary' do
                       span.icon.is-large
                         span.fa-stack
                           i.fas.fa-circle.fa-stack-2x

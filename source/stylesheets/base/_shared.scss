@@ -135,16 +135,6 @@ header {
     }
   }
 
-  &__social {
-    a.has-text-pastel {
-      opacity: 0.7;
-
-      &:hover {
-        opacity: 1;
-      }
-    }
-  }
-
   @include fullhd {
     &::before {
       height: 200%;

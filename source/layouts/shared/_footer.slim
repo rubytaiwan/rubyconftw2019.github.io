@@ -9,16 +9,16 @@ footer.footer.has-background-primary
           li.modal-button data-target="code-of-conduct" Code of Conduct
           li.modal-button data-target="team-members" Team Members
           li
-            = link_to 'Ruby Taiwan', 'https://ruby.tw/', target: '_blank', rel:'noopener noreferrer', class:'has-text-pastel'
+            = link_to 'Ruby Taiwan', 'https://ruby.tw/', target:'_blank', rel:'noopener', class:'has-text-pastel'
       .column
         ul.footer__list.footer__social
           - data.site.socialMedia.each do |item|
             li
               span = item.name
-              = link_to item.title, item.link, target: '_blank', rel:'noopener noreferrer', class: 'has-text-pastel has-text-weight-semibold'
+              = link_to item.title, item.link, target:'_blank', rel:'noopener', class: 'has-text-pastel has-text-weight-bold'
           li
             span E-mail
-            = mail_to data.site.contactEmail, data.site.contactEmail, class: 'has-text-pastel has-text-weight-semibold'
+            = mail_to data.site.contactEmail, data.site.contactEmail, class: 'has-text-pastel has-text-weight-bold'
 
     .level.has-margin-top-md
       .level-item
@@ -48,7 +48,7 @@ footer.footer.has-background-primary
               .member__socials.has-text-centered
                 - ['home', 'twitter', 'github'].each do |link|
                   - if member.instance_eval(link).present?
-                    = link_to member.instance_eval(link), target: '_blank', class: 'has-text-primary' do
+                    = link_to member.instance_eval(link), target:'_blank', rel:'noopener', class: 'has-text-primary' do
                       span.icon.is-large
                         span.fa-stack
                           i.far.fa-circle.fa-stack-2x
