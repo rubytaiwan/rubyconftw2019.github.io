@@ -4,7 +4,18 @@ section.section.is-alt-section.sponsors#sponsors-section.is-paddingless
       header.has-text-centered.is-text-alt
         h2.title.is-uppercase.has-text-primary Sponsors
 
-      .sponsors__cta.has-text-centered
+      - data.sponsor.each do |session|
+        - if session[1].present?
+          .level.has-margin-top-md
+            .level-item
+              p.title.is-text-alt.is-capitalized.has-text-brown = session[0]
+          .columns.is-multiline.is-centered
+            - session[1].each do |item|
+              .column class="#{session[0] == 'platinum' ? 'is-half' : 'is-one-third'}"
+                = link_to item.link, target:'_blank', rel:'noopener', class:'is-block sponsors__logo' do
+                  = image_tag 'sponsors/' + item.logo, data: { src: image_path('sponsors/' + item.logo)}, alt: item.name, title: item.desc, class:'lazyload sponsors__logo--' + session[0]
+
+      .sponsors__cta.has-text-centered.has-margin-top-md.has-margin-top-lg-tablet
         em.is-size-5.is-size-4-tablet
           | We are Calling for Sponsorship!
           br

@@ -1,6 +1,7 @@
 // Color palette
 $c-pastel: #ebe2c4;
 $c-orange: #e37b3a;
+$c-brown:  #38221A;
 
 $breakpoint: (
   tablet: $tablet,
@@ -36,6 +37,14 @@ body {
 
   &:hover {
     color: $c-orange !important;
+  }
+}
+
+.has-text-brown {
+  color: $c-brown;
+
+  &:hover {
+    color: $c-brown !important;
   }
 }
 

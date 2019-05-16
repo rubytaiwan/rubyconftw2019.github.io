@@ -11,5 +11,6 @@ nav#navbar.navbar.is-fixed-top.is-transparent.is-shrink[role="navigation" aria-l
       .navbar-end
         - ['News', 'Speakers', 'Venue', 'Schedule' ,'Parties', 'Sponsors'].each do |item|
           = link_to item, '#' + item.parameterize + '-section', class:'navbar-item', id: 'nav-' + item.parameterize
-        .navbar-item
-          = link_to 'Call for Papers', data.site.cfpLink, target:'_blank', rel:"noopener", class:'button is-primary is-size-5'
+        - if data.site.registerLink?
+          .navbar-item
+            = link_to 'Register Now', data.site.registerLink, target:'_blank', rel:"noopener", class:'button is-primary is-size-5'
