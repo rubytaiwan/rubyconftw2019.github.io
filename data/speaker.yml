@@ -1,19 +1,23 @@
-- id: 1
-  schedule_id: 3
+- schedule_id: 3
+  order: 1
+  keynote: true
   name: 'Yukihiro Matsumoto (Matz)'
   title: 'Creator of Ruby, Heroku'
   avatar: 'speakers/matz.jpg'
   twitter: https://twitter.com/yukihiro_matz
   github: https://github.com/matz
+  lang: en
   subject: 'TBD'
   summary: |-
 
-- id: 2
-  schedule_id: 15
+- schedule_id: 15
+  order: 1
+  keynote: true
   name: 'Yo-An Lin (C9S)'
   title: 'UI, UX, Frontend, Backend Professional.'
   avatar: 'speakers/c9s.jpg'
   home: https://about.me/c9s
   twitter: https://twitter.com/c9s
+  lang: en
   subject: 'TBD'
   summary: |-

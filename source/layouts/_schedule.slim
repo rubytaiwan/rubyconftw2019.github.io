@@ -1,3 +1,4 @@
+.background-arch-footer--primary
 section.section.is-alt-section.schedule#schedule-section.is-paddingless
   .container.has-background-pastel
     header.has-text-centered.is-text-alt
@@ -14,47 +15,41 @@ section.section.is-alt-section.schedule#schedule-section.is-paddingless
 
       .schedule__table__header.is-hidden-mobile.is-text-alt.has-text-primary.has-text-weight-semibold
         .columns.is-marginless
-          .column.is-2.is-hidden-touch
+          .column.is-2.is-hidden-mobile
           .column
             p 1001 Auditorium
           .column
             p 1002 Auditorium
-          .column
-            p 1003 Auditorium
 
       .schedule__table__body
 
-        - data.schedule.each_with_index do |day, index|
-          div.tab-content id="#{day[0]}" class="#{index == 0 ? 'is-active' : ''}"
-            - day[1].each do |item|
-              - if item.type == 'event'
-                .columns.is-multiline.is-marginless class="#{item.agenda == 'Break' ? 'break' : ''}"
-                  .column.period.is-text-alt.is-12-tablet.is-2-desktop
-                    p = item.period
+        - [Schedule.day_one, Schedule.day_two].each_with_index do |day, index|
+          .tab-content id="#{index == 0 ? 'dayOne' : 'dayTwo'}" class="#{index == 0 ? 'is-active' : ''}"
+            - day.each do |schedule|
+
+              - if schedule.type == 'event'
+                .columns.is-multiline.is-marginless class="#{schedule.agenda == 'Break' ? 'is-break' : 'is-event'}"
+                  .column.period.is-2-tablet
+                    span.is-text-alt = schedule.time
                   .column
-                    .agenda.is-uppercase = item.agenda
+                    p.is-uppercase = schedule.agenda
+
               - else
-                .columns.session.is-multiline.is-marginless
-                  .column.period.is-text-alt.is-12-tablet.is-2-desktop
-                    p = item.period
-                  
-                  - if item.session.present?
-                    - item.session.each.with_index(1) do |topic, index|
-                      - find_speaker_by(topic) do |speaker|
+                .columns.is-multiline.is-marginless.is-mobile.is-session
+                  .column.period.is-2-tablet
+                    span.is-text-alt = schedule.time
+                    
+                  - if schedule.speakers.present?
+                    - schedule.speakers.each.with_index(1) do |speaker, index|
+                    
+                      .column.modal-button[data-toggle='modal' data-target="#{speaker.name.parameterize}" class="#{speaker.order == 1 ? 'is-first' : 'is-second'} #{speaker.keynote ? '' : 'is-5-tablet'}"]
+                        span.tag.is-medium.is-primary.has-margin-bottom-sm.is-hidden-tablet 100#{index}
+                        figure.image.speakers__avatar.is-96x96
+                          = image_tag 'public/lqip-src.jpg', data: { src: image_path(speaker.avatar)}, alt: [data.site.title , speaker.name].compact.join(' - '), class:'is-rounded lazyload blur-up'
+                        h3.is-subject.is-text-alt.has-text-primary.has-text-weight-semibold.is-size-4 = speaker.subject
+                        h4.is-size-6 = speaker.name
+                        span.tag.is-white.is-uppercase.has-text-grey = speaker.lang
 
-                        - if speaker.present?
-                          .column.talks.modal-button[data-toggle='modal' data-target="#{topic.parameterize}"]
-                            span.venue.tag.is-primary.is-medium.has-margin-bottom-sm.is-hidden-tablet 100#{index}
-                            figure.image.speakers__avatar.is-96x96
-                              = image_tag speaker.avatar, data: { src: image_path(speaker.avatar)}, alt: [data.site.title , speaker.avatar].compact.join(' - '), class:'lazyload is-rounded'
-                            .topic.is-text-alt.has-text-primary.has-text-weight-semibold.is-size-4 = speaker.subject
-                            .speaker.is-size-6 = speaker.name
-
-                        - else
-                          .column
-                            p.has-text-danger Typing Error
-
-
-                  - else 
-                    .column
+                  - else
+                    .column.is-tbd
                       p.is-italic.has-text-grey TBD

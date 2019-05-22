@@ -78,6 +78,7 @@
           }
   
           &.is-session {
+            flex-direction: column;
   
             .column {
               padding-top: 2rem;
@@ -95,6 +96,14 @@
                   background: rgba($primary, 0.1);
                 }
               }
+
+              &.is-first {
+                order: 1;
+              }
+
+              &.is-second {
+                order: 2;
+              }
             }
 
             .is-tbd + .is-tbd {
@@ -103,6 +112,10 @@
 
             .is-subject {
               margin-top: 0.75rem;
+            }
+
+            .tag {
+              background: rgba(#fff, 0.3);
             }
           }
 
@@ -150,6 +163,7 @@
             border-bottom: none;
 
             &.is-session {
+              flex-direction: row;
   
               .column {
                 border-bottom: none !important;
