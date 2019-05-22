@@ -16,10 +16,6 @@ module ViewHelpers
     date.strftime("%b %d, %Y")
   end
 
-  def find_speaker_by(name, &block)
-    yield data.speakers.find { |speaker| speaker['name'] == name }
-  end
-
   def markdown(text)
     options = {
       link_attributes: { target: "_blank" },
