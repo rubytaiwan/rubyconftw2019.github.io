@@ -9,7 +9,7 @@ section.section.speakers#speakers-section.has-background-primary
           .column.is-half-tablet.is-one-third-desktop
             .speakers__block.modal-button[data-toggle='modal' data-target="#{speaker.name.parameterize}"]
               figure.image.speakers__avatar
-                = image_tag speaker.avatar, data: { src: image_path(speaker.avatar)}, alt: [data.site.title , speaker.name].compact.join(' - '), class:'lazyload is-rounded'
+                = image_tag 'public/lqip-src.jpg', data: { src: image_path(speaker.avatar)}, alt: [data.site.title , speaker.name].compact.join(' - '), class:'is-rounded lazyload blur-up'
               .speakers__info.has-text-centered.has-margin-top-sm.has-margin-bottom-sm
                 h4.is-text-alt.has-text-info.has-text-weight-semibold.is-size-5 = speaker.name
                 p.has-text-grey-lighter = speaker.title
@@ -25,7 +25,7 @@ section.section.speakers#speakers-section.has-background-primary
           .columns.is-variable.is-8
             .column.speakers__modals__info.is-two-fifths
               figure.image.speakers__avatar
-                = image_tag speaker.avatar, data: { src: image_path(speaker.avatar)}, alt: [data.site.title , speaker.name].compact.join(' - '), class:'lazyload is-rounded'
+                = image_tag 'public/lqip-src.jpg', data: { src: image_path(speaker.avatar)}, alt: [data.site.title , speaker.name].compact.join(' - '), class:'is-rounded lazyload blur-up'
               .speakers__info.has-text-centered.has-margin-top-sm.has-margin-bottom-md
                 h4.is-text-alt.has-text-primary.has-text-weight-semibold.is-size-5 = speaker.name
                 p.is-title.has-text-orange = speaker.title
