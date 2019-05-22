@@ -46,14 +46,9 @@ footer.footer.has-background-primary
               p.has-text-primary.has-text-weight-semibold.is-size-5 = member.name
               p.has-text-orange = member.title
               .member__socials.has-text-centered
-                - ['home', 'twitter', 'github'].each do |link|
-                  - if member.instance_eval(link).present?
-                    = link_to member.instance_eval(link), target:'_blank', rel:'noopener', class: 'has-text-primary' do
-                      span.icon.is-large
-                        span.fa-stack
-                          i.far.fa-circle.fa-stack-2x
-                          i.fa-stack-1x class="#{ link == 'home' ? 'fas fa-' + link : 'fab fa-' + link }"
-
+                = partial "layouts/shared/speaker_link", locals: {url: "https://github.com/#{member.github}", klass: "fab fa-github" } if member.github
+                = partial "layouts/shared/speaker_link", locals: {url: "https://twitter.com/#{member.github}", klass: "fab fa-twitter" } if member.twitter
+                = partial "layouts/shared/speaker_link", locals: {url: member.home, klass: "fas fa-home" } if member.home
       .modal-card-foot.has-background-info.is-justified-center
         button.button.is-primary.is-outlined.has-padding-width-md Close
 
