@@ -35,6 +35,11 @@ silver:
     link: https://aihao.tw
     desc: |-
       愛好資訊科技提供軟體開發、網站營運、電商系統等顧問服務。深度了解客戶企業資訊流，持續交付得到用戶回饋，產出真正有價值的可用軟體。
+  - name: 'SILICON JUNGLES'
+    logo: 'silicon_jungles.svg'
+    link: https://siliconjungles.io
+    desc: |-
+      Silicon Jungles is a product design and development foundry. Working with entrepreneurs, startups and companies, we conceptualize, design, build, scale and launch innovative digital products and solutions.
 
 partner:
   - name: '五倍紅寶石股份有限公司'

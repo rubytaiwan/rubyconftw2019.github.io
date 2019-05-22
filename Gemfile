@@ -8,6 +8,10 @@ gem 'middleman-deploy', '~> 2.0.0.pre.alpha'
 
 gem 'redcarpet'
 
+gem 'active_hash', '~> 2.2', '>= 2.2.1'
+
+gem 'pry', '~> 0.12.2'
+
 # Template
 gem 'slim'
 

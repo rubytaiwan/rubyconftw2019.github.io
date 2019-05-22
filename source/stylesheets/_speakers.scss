@@ -70,16 +70,6 @@
     }
   }
 
-  &__cfp {
-    border-radius: 4px;
-    background: rgba($info, 0.1);
-    padding: 1.25rem;
-
-    a {
-      border-bottom: 1px solid $info;
-    }
-  }
-
   @include tablet {
 
     &__summary {

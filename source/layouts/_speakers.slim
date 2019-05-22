@@ -5,23 +5,17 @@ section.section.speakers#speakers-section.has-background-primary
 
     .speakers__list.has-margin-top-lg
       .columns.is-multiline.is-justified-center
-        - data.speakers.each do |speaker|
+        - Speaker.sort_by_name.each do |speaker|
           .column.is-half-tablet.is-one-third-desktop
             .speakers__block.modal-button[data-toggle='modal' data-target="#{speaker.name.parameterize}"]
               figure.image.speakers__avatar
-                = image_tag speaker.avatar, data: { src: image_path(speaker.avatar)}, alt: [data.site.title , speaker.name].compact.join(' - '), class:'lazyload is-rounded'
+                = image_tag 'public/lqip-src.jpg', data: { src: image_path(speaker.avatar)}, alt: [data.site.title , speaker.name].compact.join(' - '), class:'is-rounded lazyload blur-up'
               .speakers__info.has-text-centered.has-margin-top-sm.has-margin-bottom-sm
                 h4.is-text-alt.has-text-info.has-text-weight-semibold.is-size-5 = speaker.name
                 p.has-text-grey-lighter = speaker.title
 
-    .speakers__cfp.has-text-centered.has-margin-top-md.has-margin-top-lg-tablet
-      em.has-text-info.is-size-5.is-size-4-tablet
-        | We are Calling for Papers!&nbsp;
-        = link_to 'Submit', data.site.cfpLink, target:'_blank', rel:'noopener', class:'has-text-info has-text-weight-semibold'
-        | &nbsp;now to become one of our speakers.
-
 .speakers__modals
-  - data.speakers.each do |speaker|
+  - Speaker.sort_by_name.each do |speaker|
     .modal id="#{speaker.name.parameterize}"
       .modal-background
       .modal-card.has-background-primary
@@ -31,7 +25,7 @@ section.section.speakers#speakers-section.has-background-primary
           .columns.is-variable.is-8
             .column.speakers__modals__info.is-two-fifths
               figure.image.speakers__avatar
-                = image_tag speaker.avatar, data: { src: image_path(speaker.avatar)}, alt: [data.site.title , speaker.name].compact.join(' - '), class:'lazyload is-rounded'
+                = image_tag 'public/lqip-src.jpg', data: { src: image_path(speaker.avatar)}, alt: [data.site.title , speaker.name].compact.join(' - '), class:'is-rounded lazyload blur-up'
               .speakers__info.has-text-centered.has-margin-top-sm.has-margin-bottom-md
                 h4.is-text-alt.has-text-primary.has-text-weight-semibold.is-size-5 = speaker.name
                 p.is-title.has-text-orange = speaker.title

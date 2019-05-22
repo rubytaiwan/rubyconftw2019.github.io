@@ -26,7 +26,11 @@ page '/*.txt', layout: false
 # Helpers
 require 'lib/view_helpers'
 
+require 'lib/models'
+
 helpers ViewHelpers
+
+require 'pry'
 
 # Build-specific configuration
 # https://middlemanapp.com/advanced/configuration/#environment-specific-settings
