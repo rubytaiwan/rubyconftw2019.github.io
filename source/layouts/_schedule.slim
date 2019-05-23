@@ -3,9 +3,7 @@ section.section.is-alt-section.schedule#schedule-section.is-paddingless
   .container.has-background-pastel
     header.has-text-centered.is-text-alt
       h2.title.is-uppercase.has-text-primary Schedule
-
     .schedule__table.has-text-centered.is-size-5
-
       .schedule__table__tabs.tabs.is-toggle.is-medium.is-text-alt.has-text-weight-semibold
         ul
           li.tab[data-tab="dayOne"]
@@ -42,7 +40,7 @@ section.section.is-alt-section.schedule#schedule-section.is-paddingless
                   - if schedule.speakers.present?
                     - schedule.speakers.each.with_index(1) do |speaker, index|
                     
-                      .column.modal-button[data-toggle='modal' data-target="#{speaker.name.parameterize}" class="#{speaker.order == 1 ? 'is-first' : 'is-second'} #{speaker.keynote ? '' : 'is-5-tablet'}"]
+                      .column.modal-button[data-toggle='modal' data-target="#{speaker.github}" class="#{speaker.order == 1 ? 'is-first' : 'is-second'} #{speaker.keynote ? '' : 'is-5-tablet'}"]
                         span.tag.is-medium.is-primary.has-margin-bottom-sm.is-hidden-tablet 100#{index}
                         figure.image.speakers__avatar.is-96x96
                           = image_tag 'public/lqip-src.jpg', data: { src: image_path(speaker.avatar)}, alt: [data.site.title , speaker.name].compact.join(' - '), class:'is-rounded lazyload blur-up'

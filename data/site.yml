@@ -11,7 +11,7 @@ sponsorDeck_en: https://bit.ly/2TYGnsY
 socialMedia:
   - name: Twitter
     title: '@rubyconftw'
-    link: https://twitter.com/rubyconftw
+    link: rubyconftw
   - name: Facebook
     title: RubyConf Taiwan
     link: https://www.facebook.com/rubyconftw/
@@ -46,27 +46,28 @@ parties:
 teamMember:
   - name: 'Mu-Fan Teng'
     title: 'Chief Organizer'
-    twitter: https://twitter.com/ryudoawaru
-    github: https://github.com/ryudoawaru
+    twitter: ryudoawaru
+    github: ryudoawaru
+    home: 'https://ryudo.tw'
   - name: 'Sabrina Chiang'
     title: 'Organizer'
-    twitter: https://twitter.com/sabrina_chiang
+    twitter: sabrina_chiang
   - name: 'Tse-Hau Chao'
     title: 'Organizer'
-    twitter: https://twitter.com/thchao
-    github: https://github.com/jodeci
-  - name: 'Chien-Lung Kao'
+    twitter: thchao
+    github: jodeci
+  - name: 'Eddie Kao'
     title: 'Organizer'
     home: https://kaochenlong.com/
-    twitter: https://twitter.com/eddiekao
-    github: https://github.com/kaochenlong
+    twitter: eddiekao
+    github: kaochenlong
   - name: 'Keddie Huang'
     title: 'Event Producer'
-    twitter: https://twitter.com/Huang_Keddie
+    twitter: Huang_Keddie
   - name: 'Irene Chang'
     title: 'Web Developer'
-    twitter: https://twitter.com/irene841111
-    github: https://github.com/irene84111
+    twitter: irene841111
+    github: irene84111
   - name: 'Chia-Hui Yeh'
     title: 'Event Producer & VI Designer'
 
