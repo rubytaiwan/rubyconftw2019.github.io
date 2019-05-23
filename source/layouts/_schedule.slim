@@ -41,13 +41,19 @@ section.section.is-alt-section.schedule#schedule-section.is-paddingless
                     - schedule.speakers.each.with_index(1) do |speaker, index|
                     
                       .column.modal-button[data-toggle='modal' data-target="#{speaker.github}" class="#{speaker.order == 1 ? 'is-first' : 'is-second'} #{speaker.keynote ? '' : 'is-5-tablet'}"]
-                        span.tag.is-medium.is-primary.has-margin-bottom-sm.is-hidden-tablet 100#{index}
+                        span.tag.is-medium.is-primary.has-margin-bottom-sm.is-hidden-tablet 100#{speaker.order}
                         figure.image.speakers__avatar.is-96x96
                           = image_tag 'public/lqip-src.jpg', data: { src: image_path(speaker.avatar)}, alt: [data.site.title , speaker.name].compact.join(' - '), class:'is-rounded lazyload blur-up'
-                        h3.is-subject.is-text-alt.has-text-primary.has-text-weight-semibold.is-size-4 = speaker.subject
-                        h4.is-size-6 = speaker.name
+                        h3.is-subject.is-text-alt.has-text-primary.has-text-weight-semibold.is-size-4-tablet = speaker.subject
+                        h4.is-size-6.is-size-5-tablet = speaker.name
                         span.tag.is-white.is-uppercase.has-text-grey = speaker.lang
 
                   - else
                     .column.is-tbd
                       p.is-italic.has-text-grey TBD
+
+    .notification.schedule__interpretation.is-primary.has-text-centered.has-margin-top-sm
+      p.is-size-5-tablet
+        | We offer&nbsp;
+        = link_to "Simultaneous Interpretation Service", data.site.interpretationLink, target: '_blank', rel:'noopener', class:"is-link"
+        | &nbsp;(Chinese to English) on all Chinese sessions.

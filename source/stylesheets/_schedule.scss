@@ -11,6 +11,16 @@
     background: $c-pastel;
   }
 
+  &__interpretation .is-link{
+    text-decoration: none !important;
+    padding-bottom: 0.25rem;
+    border-bottom: 1px dotted rgba(#fff, 0.5);
+
+    &:hover {
+      color: $info !important;
+    }
+  }
+
   &__table {
 
     .column {
@@ -62,12 +72,17 @@
         border-top: 2px solid $primary;
         border-bottom: 2px solid $primary;
 
+
+        &#dayOne .columns:nth-child(even) {
+          background: rgba($primary, 0.05);
+        }
+
+        &#dayTwo .columns:nth-child(odd) {
+          background: rgba($primary, 0.05);
+        }
+
         .columns {
           border-bottom: 1px solid rgba($primary, 0.5);
-  
-          &:nth-child(even) {
-            background: rgba($primary, 0.05);
-          }
   
           &:last-child {
             border-top: 2px solid $primary;
@@ -83,11 +98,6 @@
             .column {
               padding-top: 2rem;
               padding-bottom: 2rem;
-              border-bottom: 1px solid rgba(#fff, 0.3);
-  
-              &:last-child {
-                border: none;
-              }
   
               &.modal-button {
                 cursor: pointer;
@@ -103,6 +113,7 @@
 
               &.is-second {
                 order: 2;
+                border-top: 1px solid rgba(#fff, 0.3);
               }
             }
 
@@ -111,10 +122,11 @@
             }
 
             .is-subject {
-              margin-top: 0.75rem;
+              margin: 0.75rem 0 0.5rem;
+              line-height: 1.2
             }
 
-            .tag {
+            .tag.is-white {
               background: rgba(#fff, 0.3);
             }
           }
@@ -166,7 +178,12 @@
               flex-direction: row;
   
               .column {
-                border-bottom: none !important;
+                padding: 2rem;
+
+                &.is-second {
+                  border-top: none !important;
+                  border-left: 1px solid rgba(#fff, 0.3);
+                }
               }
             }
 

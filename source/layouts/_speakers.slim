@@ -35,7 +35,7 @@ section.section.speakers#speakers-section.has-background-primary
                 = partial "layouts/shared/speaker_link", locals: {url: speaker.home, klass: "fas fa-home" } if speaker.home
 
             .column.speakers__modals__talk.is-flex.has-text-centered
-              h3.speakers__topic.is-text-alt.has-text-orange.has-text-weight-semibold.is-size-4 = speaker.subject
+              h3.speakers__topic.is-text-alt.has-text-orange.has-text-weight-semibold.is-size-5.is-size-4-tablet = speaker.subject
               = image_tag 'mixins/ic-deco.svg', alt: data.site.title, class: 'speakers__deco'
               .speakers__summary.has-text-left.has-padding-width-sm-tablet
                 = markdown(speaker.summary)
