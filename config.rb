@@ -12,7 +12,7 @@ end
 
 activate :sprockets
 
-activate :asset_hash, :ignore => %w(.svg)
+activate :asset_hash, :ignore => %r{^images/sponsors/.*}
 
 activate :directory_indexes
 
