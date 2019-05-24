@@ -11,68 +11,101 @@
     background: $c-pastel;
   }
 
-  .columns {
-    max-width: 1180px;
-    margin: 0 auto;
-  }
-
-  &__pre_party {
-    background: image-url('mixins/deco_tile_blue.svg');
-  }
-
-  &__the_official_party {
-    background: image-url('mixins/deco_tile_yellow.svg');
-  }
-
   &__card {
-    max-width: 510px;
+    max-width: 320px;
     margin: 0 auto;
+    background: image-url('mixins/bg_scratches.png'), rgba($info, 0.5) ;
+
+    &:nth-child(even) .parties__cover {
+      background: image-url('mixins/deco_tile_yellow.svg');
+    }
+
+    &:nth-child(odd) .parties__cover {
+      order: 2;
+      background: image-url('mixins/deco_tile_blue.svg');
+    }
+
+    + .parties__card {
+      margin-top: 1.5rem;
+    }
   }
 
   &__cover {
-    flex-direction: column;
-    padding: 3rem 1.5rem 1.5rem;
+    position: relative;
+    padding-top: 100% !important;
   }
 
-  &__footer {
-    padding: 1rem;
-
-    p {
-      line-height: 2;
-    }
+  &__content {
+    background: rgba($info, 0.5);
+    display: flex;
+    align-items: center;
   }
 
-  &__location a{
-    border-bottom: 1px solid $c-pastel;
-  }
+  &__info {
+    position: relative;
+    width: 100%;
+    padding: 1.5rem;
+    padding-left: 3.5rem !important;
 
-  &__btn {
-    display: block;
-    margin: 0.75rem auto;
-
-    &:hover, &:focus {
-      color: $primary !important;
+    .icon.is-deco {
+      position: absolute;
+      top: 1.5rem;
+      left: 1.2rem;
     }
 
-    &[disabled] {
-      cursor: default;
-      &:hover, &:focus {
-        color: $info !important;
+    &::after {
+      content: '';
+      position: absolute;
+      width: 2px;
+      height: calc( 100% - 6rem);
+      background: $primary;
+      bottom: 1.5rem;
+      left: 33.5px;
+    }
+
+    &.coming-soon {
+      padding: 3rem 1rem !important;
+
+      &::after {
+        content: '';
+        width: 0;
       }
     }
   }
 
-  @include tablet {
+  &__title {
+    position: absolute;
+    transform: translateX(-50%) translateY(-50%);
+    width: 100%;
+    top: 50%;
+    left: 50%;
+    padding: 2.5rem;
 
-    &__footer {
-      padding: 3rem 1rem;
-    }
+    line-height: 1;
+    text-shadow: 0 2px 4px rgba($primary, 0.3);
   }
 
-  @include desktop {
+  &__location a{
+    padding-bottom: 0.25rem;
+    border-bottom: 1px solid rgba($primary, 0.5);
+  }
+
+  &__btn {
+    pointer-events: none;
+  }
+
+  @include tablet {
+
+    &__card{
+      max-width: 840px;
+
+      + .parties__card {
+        margin-top: 3rem;
+      }
+    } 
 
     &__cover {
-      padding: 3rem;
+      padding-top: 30% !important;
     }
   }
 }

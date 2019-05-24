@@ -31,21 +31,31 @@ eventAddress_en: No. 11, Zhongshan South Road, Zhongzheng District, Taipei City
 eventGoogleMap: https://www.google.com/maps/place/張榮發基金會/@25.038668,121.5165528,17z
 
 parties:
-  - session: Pre Party
-    datetime: 
+  - session: |-
+      Pre
+      Party
+    date: 
+    time:
     location: 
     locationLink: 
     registerLink: 
     cfaBtn: Coming Soon
-  - session: The Official Party
-    datetime:
+  - session: |-
+      The
+      Official
+      Party
+    date:
+    time:
     location:
     locationLink:
     registerLink:
     cfaBtn: Free for Attendee
-  - session: RubyConf Taiwan 2019 After Hack
-    datetime: 2019/07/28 10:30 - 18:00
-    location: 5xRuby Office
+  - session: |-
+      After
+      Hack
+    date: July 28, 2019
+    time: 10:30 - 18:00
+    location: 5XRUBY CO., LTD
     locationLink: https://goo.gl/maps/2Z1qETBU2DHjxPvz8
     registerLink:
     cfaBtn: Free for Attendee

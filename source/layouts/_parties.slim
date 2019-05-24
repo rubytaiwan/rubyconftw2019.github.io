@@ -3,31 +3,29 @@ section.section.is-alt-section.parties#parties-section.is-paddingless
     header.has-text-centered.is-text-alt
       h2.title.is-uppercase.has-text-primary Parties
 
-    .columns
-      - data.site.parties.each do |party|
-        .column
-          .card.parties__card class="parties__#{party.session.parameterize.underscore}"
-            .parties__cover.is-flex.is-justified-center
-                = image_tag( 'mixins/parties_banner.svg', alt: '2019 Ruby Conf Taiwan -' + party.session)
-                = image_tag( 'mixins/parties_ic_' + party.session.parameterize.underscore + '.svg', alt: '2019 Ruby Conf Taiwan -' + party.session, class:'has-margin-top-sm')
+    - data.site.parties.each do |party|
+      .card.parties__card
+        .columns.is-marginless
+          .column.parties__cover.is-one-third
+            h4.parties__title.has-text-primary.has-text-weight-semibold.is-text-alt.is-pre-line.is-size-2.is-size-1-desktop = party.session
+          .column.parties__content.is-paddingless
 
-            .parties__footer.has-background-primary.has-text-pastel.has-text-centered.has-text-weight-semibold.is-size-5
-
-              span.icon.is-medium
-                = image_tag('mixins/ic-pastel.svg')
-
-              - if party.datetime?
-                p.parties__datetime = party.datetime
-                .parties__location
+            - if party.date?
+              .parties__info
+                span.icon.is-medium.is-deco
+                  = image_tag('mixins/ic_pastel.svg')
+                p.parties__datetime.has-text-primary.has-text-weight-semibold.is-text-alt.is-size-4
+                  = party.date
+                  | &nbsp;
+                  br.is-hidden-tablet
+                  span.is-size-5 = party.time
+                .parties__location.has-text-primary.is-size-5.has-margin-top-xs
                   span.icon
                     i.fas.fa-map-marker-alt
                   | &nbsp;
-                  = link_to party.location, party.locationLink, target:'_blank', rel:'noopener', class:"has-text-info"
+                  = link_to party.location, party.locationLink, target:'_blank', rel:'noopener', class:"has-text-primary"
+                button.button.parties__btn.is-outlined.is-primary.is-medium.is-fullwidth.has-margin-top-sm = party.cfaBtn
 
-                button.button.parties__btn.is-outlined.is-info.is-medium[disabled=""] = party.cfaBtn
-              
-              - else
-                span.is-text-alt.is-size-4.has-padding-width-sm[style="vertical-align:bottom;"] COMING SOON
-
-              span.icon.is-medium
-                = image_tag('mixins/ic-pastel.svg')
+            - else
+              .parties__info.coming-soon
+                p.is-text-alt.is-size-4.has-padding-width-sm.has-text-centered[style="vertical-align:bottom;"] COMING SOON

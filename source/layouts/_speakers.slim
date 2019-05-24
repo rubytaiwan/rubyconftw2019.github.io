@@ -1,4 +1,10 @@
 section.section.speakers#speakers-section.has-background-primary
+
+  .speakers__deco.is-hidden-touch
+    = image_tag( 'mixins/ic_sauce.svg', alt: data.site.title, class:'speakers__ic speakers__ic--sauce')
+    - ['baos', 'zongzi', 'dumplings'].each do |item|
+      = image_tag( 'mixins/ic_' + item + '.svg', alt: data.site.title, class:'speakers__ic speakers__ic--'+ item)
+
   .container
     header.has-text-centered.is-text-alt
       h2.title.is-uppercase.has-text-white Speakers
@@ -36,6 +42,6 @@ section.section.speakers#speakers-section.has-background-primary
 
             .column.speakers__modals__talk.is-flex.has-text-centered
               h3.speakers__topic.is-text-alt.has-text-orange.has-text-weight-semibold.is-size-5.is-size-4-tablet = speaker.subject
-              = image_tag 'mixins/ic-deco.svg', alt: data.site.title, class: 'speakers__deco'
+              = image_tag 'mixins/ic_deco.svg', alt: data.site.title, class: 'speakers__deco'
               .speakers__summary.has-text-left.has-padding-width-sm-tablet
                 = markdown(speaker.summary)

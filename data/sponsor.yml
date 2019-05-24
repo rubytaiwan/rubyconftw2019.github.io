@@ -23,6 +23,11 @@ platinum:
     link: https://cardinalblue.com/careers
     desc: |-
       PicCollage 是一個追求自由創造及分享的照片拼貼 APP，主要使用者來自歐美、南美、及日本等市場。目前全球累計超過 2 億的下載量，並多次在數十個國家挺進照片影片類 app 排行榜前十名。希望透過友善的設計加上先進軟體技術，讓世界變得更有趣、更有創意！
+  - name: 'Scout (Zimuth, Inc)'
+    logo: 'scout.svg'
+    link: https://scoutapm.com/
+    desc: |-
+      Scout provides an APM (application performance monitoring) that helps solve memory bloat, performance abnormalities, and other issues. Our goal is to provide deep insights to developers with our intuitive user interface. We provide our APM for Ruby, Python and Elixir.
 
 silver:
   - name: '5FPRO 伍樓專業'
