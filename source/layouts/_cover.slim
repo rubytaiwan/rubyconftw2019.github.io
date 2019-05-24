@@ -7,14 +7,15 @@ section.cover.hero.is-fullheight
           = inline_svg('main_logo')
         p.cover__info__date.has-text-primary.has-text-weight-semibold.is-text-alt.has-text-centered.has-text-left-widescreen.has-padding-width-md-widescreen.is-size-5.is-size-3-tablet
           = data.site.eventDate
-          | &nbsp;@Taipei
+          span.is-hidden-tablet &nbsp;@Taipei
+        p.cover__info__location.has-text-primary.has-text-centered.has-text-left-widescreen.has-padding-width-md-widescreen.has-margin-top-xs.is-hidden-mobile.is-pre-line.is-size-5 = data.site.eventLocation
         - if data.site.registerLink?
           .cover__info__cta.has-text-centered.has-text-left-widescreen.has-padding-width-md-widescreen.has-margin-top-sm
-            = link_to 'Register Now', data.site.registerLink, target:'_blank', rel:"noopener", class:'button is-primary is-text-alt has-padding-width-sm is-size-5 is-size-4-tablet'
+            = link_to 'Register Now', data.site.registerLink, target:'_blank', rel:"noopener", class:'button has-shadow is-primary is-text-alt has-padding-width-sm is-size-5 is-size-4-tablet'
     
   .hero-foot
     .background-arch-header--primary
-    p.cover__info__location.has-text-info.has-text-right.is-hidden-mobile.is-pre-line.is-size-5.is-size-4-desktop = data.site.eventLocation
+    = image_tag( 'mixins/ic_bubble_tea.svg', alt: data.site.title, class:'cover__ic__bubble_tea')
     - ['left', 'middle', 'right'].each do |item|
-      = image_tag( 'mixins/ic-rice.svg', alt: data.site.title, class:'cover__ic__rice cover__ic__rice--'+ item)
-    = inline_svg('ic-pot')
+      = image_tag( 'mixins/ic_rice.svg', alt: data.site.title, class:'cover__ic__rice cover__ic__rice--'+ item)
+    = inline_svg('ic_pot')

@@ -27,6 +27,10 @@
       animation: slide-in-bottom 0.8s 0.5s both;
     }
 
+    &__location {
+      animation: slide-in-bottom 0.8s 0.6s both;
+    }
+
     &__cta {
       animation: slide-in-bottom 0.8s 0.8s both;
     }
@@ -57,23 +61,34 @@
 
   &__ic {
 
+    &__bubble_tea {
+      position: absolute;
+      width: 6vw;
+      min-width: 35px;
+      max-width: 50px;
+      bottom: 10vw;
+      left: 4vw;
+      z-index: 3;
+    }
+
     &__rice {
       position: absolute;
       width: 6vw;
       z-index: 3;
 
       &--left {
-        min-width: 40px;
-        max-width: 70px;
-        bottom: 2.5rem;
-        left: 5vw;
+        display: none;
+        min-width: 60px;
+        max-width: 80px;
+        bottom: 10vw;
+        left: 48vw;
       }
 
       &--middle {
         min-width: 50px;
         max-width: 80px;
         bottom: 0.75rem;
-        left: 15vw;
+        left: 16vw;
       }
 
       &--right {
@@ -188,42 +203,40 @@
       &__date {
         margin-top: 0;
       }
-      
-      &__location {
-        position: absolute;
-        width: 50%;
-        bottom: 4vw;
-        left: 1.5rem;
-        padding-right: 1.5rem;
-        z-index: 2;
-      }
     }
 
     &__ic {
 
+      &__bubble_tea {
+        max-width: 70px;
+        bottom: 8vw;
+        left: 30vw;
+      }
+
       &__rice {
 
         &--left {
-          bottom: 12vw;
-          left: 48vw;
+          display: block;
         }
 
         &--middle {
+          min-width: 60px;
+          max-width: 90px;
           bottom: 3vw;
-          left: 56vw;
+          left: 40vw;
         }
 
         &--right {
-          bottom: 5vw;
-          left: 86vw;
+          bottom: 3vw;
+          left: 84vw;
         }
       }
 
       &__pot {
-        min-width: 420px;
+        min-width: 480px;
         width: 38vw;
-        max-width: 800px;
-        bottom: 8vw;
+        max-width: 680px;
+        bottom: 5vw;
         left: 70vw
       }
     }
@@ -232,7 +245,7 @@
   @include desktop {
 
     .hero-foot .background-arch-header--primary::before {
-      top: 60%;
+      top: 68%;
     }
 
     &__info {
@@ -248,12 +261,30 @@
         padding-right: 0;
       }
     }
+
+    &__ic {
+
+      &__bubble_tea {
+        left: 32vw;
+      }
+
+      &__rice {
+  
+        &--left {
+          left: 52vw;
+        }
+  
+        &--middle {
+          left: 46vw;
+        }
+      }
+    }
   }
 
   @include fullhd {
 
     .hero-foot .background-arch-header--primary::before {
-      top: 65%;
+      top: 68%;
     }
 
     .hero-body {
@@ -261,7 +292,7 @@
     }
 
     &__info .main__logo {
-      max-width: 960px;
+      max-width: 840px;
     }
   }
 }
