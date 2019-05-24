@@ -1,9 +1,9 @@
 title: Ruby Conf Taiwan 2019
-description: 眾所矚目的 Ruby Conf Taiwan 2019 將在 2019 年 7 月 26 - 27 日於張榮發基金會國際會議中心隆重舉辦，敬請期待！
-keywords: 2019,Ruby,Ruby Taiwan,Ruby Conference,Ruby Conf Taiwan,Taiwan
+description: "RubyConf Taiwan 2019, 7/26...7/27, Taipei, Taiwan #rubyconftw"
+keywords: RubyConf Taiwan 2019, rubyconftw, 2019
 
 contactEmail: contact@rubyconf.tw
-registerLink:
+registerLink: 'https://rubytaiwan.kktix.cc/events/rubyconftw2019'
 cfpLink: https://cfp.rubyconf.tw/activities/2019
 interpretationLink:
 supportLink: https://rubyelixirconftw.typeform.com/to/JRlRsr
@@ -41,6 +41,12 @@ parties:
     datetime:
     location:
     locationLink:
+    registerLink:
+    cfaBtn: Free for Attendee
+  - session: RubyConf Taiwan 2019 After Hack
+    datetime: 2019/07/28 10:30 - 18:00
+    location: 5xRuby Office
+    locationLink: https://goo.gl/maps/2Z1qETBU2DHjxPvz8
     registerLink:
     cfaBtn: Free for Attendee
 

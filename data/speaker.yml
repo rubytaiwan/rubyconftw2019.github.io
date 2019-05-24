@@ -123,10 +123,8 @@
   github: elct9620
   home: 'https://frost.tw/'
   lang: ch
-  subject: 從 Enumerator 看 Ruby 的迭代器
-  summary: "在 Ruby 中我們經常的會使用 `#each` 來遍歷陣列或者一些物件，不過我們卻很少思考他是怎麼運作的。尤其是在仔細探索之後，會發現 Ruby
-    的迭代器跟其他我們熟悉的語言有所不同。而且，在比較新版本的 Ruby 中還提供了 `#lazy` 方法，這是在其他語言相對少見的特型。\r\n\r\n這些特性到底是怎麼運作的，我們是否可以用
-    Ruby 將其實作呢？讓我們從閱讀 Ruby 原始碼的過程中，一步步的了解這個我們最常使用的方法。"
+  subject: 從 Enumerator 看 Ruby 的迭代器 / Decipher Ruby's iterator with Enumerator
+  summary: "在 Ruby 中我們經常的會使用 `#each` 來遍歷陣列或者一些物件，不過我們卻很少思考他是怎麼運作的。尤其是在仔細探索之後，會發現 Ruby 的迭代器跟其他我們熟悉的語言有所不同。而且，在比較新版本的 Ruby 中還提供了 `#lazy` 方法，這是在其他語言相對少見的特型。\r\n\r\n這些特性到底是怎麼運作的，我們是否可以用 Ruby 將其實作呢？讓我們從閱讀 Ruby 原始碼的過程中，一步步的了解這個我們最常使用的方法。\r\nWe often use #each to loop through array and friends in Ruby, but we seldom think about how it actually works. Ruby's iterator is quite different compared with other languages, for instance we have uncommon methods like #lazy. How exactly do they work and can we implement them in Ruby? Let's dive in Ruby source code and find out."
 - schedule_id: 7
   order: 2
   name: Bernie Chiu
