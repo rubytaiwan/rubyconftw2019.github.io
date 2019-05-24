@@ -43,6 +43,12 @@ parties:
     locationLink:
     registerLink:
     cfaBtn: Free for Attendee
+  - session: RubyConf Taiwan 2019 After Hack
+    datetime: 2019/07/28 10:30 - 18:00
+    location: 5xRuby Office
+    locationLink: https://goo.gl/maps/2Z1qETBU2DHjxPvz8
+    registerLink:
+    cfaBtn: Free for Attendee
 
 teamMember:
   - name: 'Mu-Fan Teng'
