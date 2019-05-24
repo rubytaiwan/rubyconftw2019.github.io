@@ -1,4 +1,10 @@
 section.section.speakers#speakers-section.has-background-primary
+
+  .speakers__deco.is-hidden-touch
+    = image_tag( 'mixins/ic_sauce.svg', alt: data.site.title, class:'speakers__ic speakers__ic--sauce')
+    - ['baos', 'zongzi', 'dumplings'].each do |item|
+      = image_tag( 'mixins/ic_' + item + '.svg', alt: data.site.title, class:'speakers__ic speakers__ic--'+ item)
+
   .container
     header.has-text-centered.is-text-alt
       h2.title.is-uppercase.has-text-white Speakers

@@ -1,4 +1,36 @@
 .speakers {
+  position: relative;
+
+  .container {
+    max-width: 960px !important;
+  }
+
+  &__ic {
+    position: absolute;
+
+    &--sauce {
+      bottom: -2%;
+      right: 5%;
+    }
+
+    &--baos {
+      transform: translateX(-50%);
+      top: 27%;
+      left: 0;
+    }
+
+    &--zongzi {
+      transform: translateX(50%);
+      top: 50%;
+      right: 0;
+    }
+
+    &--dumplings {
+      transform: translateX(-50%);
+      top: 82%;
+      left: 0;
+    }
+  }
 
   &__block {
     cursor: pointer;
@@ -102,5 +134,64 @@
 
   @include widescreen {
     padding-bottom: 0;
+
+    &__ic {
+  
+      &--sauce {
+        width: 140px;
+        right: 5vw;
+      }
+  
+      &--baos {
+        transform: translateX(0%);
+        width: 160px;
+        left: 3vw;
+      }
+  
+      &--zongzi {
+        transform: translateX(0%);
+        width: 160px;
+        right: 3vw;
+      }
+  
+      &--dumplings {
+        transform: translateX(0%);
+        width: 140px;
+        left: 3vw;
+      }
+    }
+  }
+
+  @include fullhd {
+    padding-bottom: 0;
+
+    &__ic {
+  
+      &--sauce {
+        max-width: 160px;
+        width: 10vw;
+        right: 10vw;
+      }
+  
+      &--baos {
+        max-width: 220px;
+        width: 10vw;
+        left: 5vw;
+      }
+  
+      &--zongzi {
+        transform: translateX(0%);
+        max-width: 220px;
+        width: 10vw;
+        right: 5vw;
+      }
+  
+      &--dumplings {
+        transform: translateX(0%);
+        max-width: 180px;
+        width: 10vw;
+        left: 5vw;
+      }
+    }
   }
 }
