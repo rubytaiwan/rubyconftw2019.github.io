@@ -31,7 +31,7 @@ section.section.speakers#speakers-section.has-background-primary
                 p.is-title.has-text-orange = speaker.title
               .speakers__links.has-text-centered
                 = partial "layouts/shared/speaker_link", locals: {url: "https://github.com/#{speaker.github}", klass: "fab fa-github" } if speaker.github
-                = partial "layouts/shared/speaker_link", locals: {url: "https://twitter.com/#{speaker.github}", klass: "fab fa-twitter" } if speaker.twitter
+                = partial "layouts/shared/speaker_link", locals: {url: "https://twitter.com/#{speaker.twitter}", klass: "fab fa-twitter" } if speaker.twitter
                 = partial "layouts/shared/speaker_link", locals: {url: speaker.home, klass: "fas fa-home" } if speaker.home
 
             .column.speakers__modals__talk.is-flex.has-text-centered
