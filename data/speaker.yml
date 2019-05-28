@@ -253,8 +253,8 @@
   name: Luka Huang
   title: Senior Backend Engineer, Splashtop
   avatar: "//avatars.githubusercontent.com/u/7014009?v=3"
-  twitter: ''
-  github: StevenTTuD
+  twitter: codingluka
+  github: codingluka
   lang: ch
   subject: Using AWS Lambda with Ruby on a large-scale system
   summary: "\bThe serverless framework is very popular for the last 5 years. AWS Lambda
@@ -266,14 +266,14 @@
     on a large-scale system?\".\r\n\r\nAnd then let's think about \"How AWS Lambda
     solve these pain points?\".\r\n\r\nI will share some experiences about developing
     features with AWS Lambda. Discussing what situation should we use AWS Lambda.\r\n\r\nHere’s
-    what you will learn:\r\n\r\n- What is AWS Lambda?\r\n- What is the serverless
+    what you will learn:\r\n- What is AWS Lambda?\r\n- What is the serverless
     framework?\r\n- What is event-driven programming?\r\n- What are pain points when
     we develop features on large-scale system?\r\n- How AWS Lambda solves these pain
     points?\r\n- How to develop AWS Lambda with ruby?\r\n\r\n無伺服器架構是最近幾年非常熱門的話題，同時也是
     AWS 極力推廣的重點之一，而 AWS lambda 是實現無伺服器架構最重要的一環。\r\n\r\nAWS Lambda 在去年的 11 月底宣布支援 Ruby，現在我們可以用
     Ruby 來開發了，但是在怎麼樣的場景之下我們該使用 AWS Lambda 呢？\r\n\r\n今天探討的軸心為「為什麼在大型系統中我們選擇使用 AWS Lambda
     作為解決方案？」 從「大型架構會遇到哪些開發上的困難點」，引出「AWS Lambda 如何解決這些難點」。\r\n\r\n接著分享使用 AWS Lambda
-    實際開發經驗。綜合評估 AWS Lambda 的優缺點，判斷 AWS Lambda 是不是值得使用。\r\n\r\n這邊是你會學到的：\r\n\r\n- AWS
+    實際開發經驗。綜合評估 AWS Lambda 的優缺點，判斷 AWS Lambda 是不是值得使用。\r\n\r\n這邊是你會學到的：\r\n- AWS
     Lambda 是什麼東西？\r\n- 什麼是無伺服器框架？\r\n- 什麼是事件驅動程式設計？\r\n- 了解大型架構的開發上的難點。\r\n- AWS Lambda
     如何解決難點？\r\n- 如何開發 AWS Lambda？\r\n- 開發 AWS Lambda 時需要注意哪些事項。"
 - schedule_id: 13
