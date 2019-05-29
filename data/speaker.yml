@@ -56,10 +56,10 @@ members should expect to leave with more information about Rails internals along
 with development techniques that they can use in their applications today!"
 - schedule_id: 11
   order: 2
-  name: Jenna
+  name: Jenna Blumenthal
   title: ''
   avatar: "//avatars.githubusercontent.com/u/8824824?v=3"
-  twitter: ''
+  twitter: 'jennaleeblume'
   github: jennaleeb
   lang: en
   subject: Event Sourcing for Everyone
