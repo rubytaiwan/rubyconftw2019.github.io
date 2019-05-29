@@ -43,8 +43,17 @@
   github: tenderlove
   twitter: tenderlove
   lang: en
-  subject: 'TBD'
-  summary: |-
+  subject: The View Is Clear from Here
+  summary: "Web applications typically have bottlenecks at the database layer.  This is one
+reason Active Record gets so much attention by application developers, Rails
+core developers, and conference speakers.  In this talk we will be focusing on
+something a little bit different.  Instead of the database layer, we will be
+looking at the view layer of the application.  We will be looking at how view
+rendering is handled in Rails.  This will include the process by which views are
+compiled, cached, and rendered.  We'll learn how much memory they are found, how
+much memory they use, and more importantly how we can speed them up.  Audience
+members should expect to leave with more information about Rails internals along
+with development techniques that they can use in their applications today!"
 - schedule_id: 11
   order: 2
   name: Jenna

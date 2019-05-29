@@ -1,4 +1,21 @@
 module ViewHelpers
+  RendererOptions = {
+    link_attributes: { target: "_blank" },
+    space_after_headers: true,
+    fenced_code_blocks: true,
+    prettify: true,
+    hard_wrap: true
+  }
+
+  MarkDownExtensions = {
+    autolink: true,
+    superscript: true,
+    highlight: true,
+    no_intra_emphasis: true,
+    disable_indented_code_blocks: true
+  }
+  Renderer = Redcarpet::Render::HTML.new(RendererOptions)
+  MarkDown = Redcarpet::Markdown.new(Renderer, MarkDownExtensions)
 
   def root_url
     config[:protocol] + config[:host]
@@ -17,26 +34,7 @@ module ViewHelpers
   end
 
   def markdown(text)
-    options = {
-      link_attributes: { target: "_blank" },
-      space_after_headers: true,
-      fenced_code_blocks: true,
-      prettify: true,
-      hard_wrap: true
-    }
-
-    extensions = {
-      autolink: true,
-      superscript: true,
-      highlight: true,
-      no_intra_emphasis: true,
-      disable_indented_code_blocks: true
-    }
-
-    renderer = Redcarpet::Render::HTML.new(options)
-    markdown = Redcarpet::Markdown.new(renderer, extensions)
-
-    markdown.render(text).html_safe
+    MarkDown.render(text).html_safe
   end
 
 end
