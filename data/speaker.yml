@@ -18,7 +18,7 @@
   home: https://about.me/c9s
   github: c9s
   twitter: c9s
-  lang: ch
+  lang: zh
   subject: 'TBD'
   summary: |-
 - schedule_id: 15
@@ -131,7 +131,7 @@ with development techniques that they can use in their applications today!"
   twitter: elct9620
   github: elct9620
   home: 'https://frost.tw/'
-  lang: ch
+  lang: zh
   subject: 從 Enumerator 看 Ruby 的迭代器 / Decipher Ruby's iterator with Enumerator
   summary: "在 Ruby 中我們經常的會使用 `#each` 來遍歷陣列或者一些物件，不過我們卻很少思考他是怎麼運作的。尤其是在仔細探索之後，會發現 Ruby 的迭代器跟其他我們熟悉的語言有所不同。而且，在比較新版本的 Ruby 中還提供了 `#lazy` 方法，這是在其他語言相對少見的特型。\r\n\r\n這些特性到底是怎麼運作的，我們是否可以用 Ruby 將其實作呢？讓我們從閱讀 Ruby 原始碼的過程中，一步步的了解這個我們最常使用的方法。\r\nWe often use #each to loop through array and friends in Ruby, but we seldom think about how it actually works. Ruby's iterator is quite different compared with other languages, for instance we have uncommon methods like #lazy. How exactly do they work and can we implement them in Ruby? Let's dive in Ruby source code and find out."
 - schedule_id: 7
@@ -189,7 +189,7 @@ with development techniques that they can use in their applications today!"
   avatar: "//avatars.githubusercontent.com/u/12430486?v=3"
   twitter: SpringisOK
   github: Springok
-  lang: ch
+  lang: zh
   subject: '開拓者們建立鐵道的辛酸血淚史 Building Rails with Trailblazer, The Good, Bad and Ugly. '
   summary: "隨著 Rails 專案成長到一定規模，需要處理的商業邏輯也越來越複雜時，如果還是使用 Rails 原先的 MVC 架構或其提倡的一些模式，看著日漸膨脹的
     model ，而同一時間，排山倒海的 validation / callback 拆分的需求不斷襲來、頁面顯示邏輯有越來越多的情境時，團隊很有機會遇到進退維谷的情境。\r\n因此，想跟各位分享團隊在應用
@@ -233,7 +233,7 @@ with development techniques that they can use in their applications today!"
   avatar: "//avatars.githubusercontent.com/u/12554?v=3"
   twitter: ''
   github: tsechingho
-  lang: ch
+  lang: zh
   subject: Suit up for frontend and backend development
   summary: "對於開發講究 UI/UX 效果的網站，嫻熟前端框架是不可或缺的技能。採用 Rails 當作後端框架，使用 webpacker 協助架構前端環境後，該如何有效寫出好維護的
     ruby 和 javascript 程式，會是網站重要的一步。\r\n\r\nRuby/Rails 這十幾年的發展，已累積不少好用的開發模型套件，諸如 Model,
@@ -264,7 +264,7 @@ with development techniques that they can use in their applications today!"
   avatar: "//avatars.githubusercontent.com/u/7014009?v=3"
   twitter: codingluka
   github: codingluka
-  lang: ch
+  lang: zh
   subject: Using AWS Lambda with Ruby on a large-scale system
   summary: "\bThe serverless framework is very popular for the last 5 years. AWS Lambda
     is the most important service in the Serverless framework.\r\n\r\nAWS Lambda supports
