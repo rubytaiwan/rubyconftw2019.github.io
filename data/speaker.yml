@@ -98,8 +98,8 @@ with development techniques that they can use in their applications today!"
     and perhaps most importantly, make our views first-class citizens in Rails.'
 - schedule_id: 5
   order: 2
-  name: hsbt
-  title: Executive Officer
+  name: Shibata Hiroshi
+  title: "Aember of Ruby core/RubyGems/Bundler team"
   avatar: "//avatars.githubusercontent.com/u/12301?v=3"
   twitter: hsbt
   github: hsbt
@@ -184,7 +184,7 @@ with development techniques that they can use in their applications today!"
     moving forward"
 - schedule_id: 23
   order: 1
-  name: WenchuanLin
+  name: Wen-Chuan Lin
   title: ''
   avatar: "//avatars.githubusercontent.com/u/12430486?v=3"
   twitter: SpringisOK
@@ -244,7 +244,7 @@ with development techniques that they can use in their applications today!"
     suitable for frontend/backend separated development."
 - schedule_id: 23
   order: 2
-  name: stackng
+  name: Li-Fong Lin
   title: ''
   avatar: "//avatars.githubusercontent.com/u/468564?v=3"
   twitter: ''
