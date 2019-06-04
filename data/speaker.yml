@@ -19,8 +19,10 @@
   github: c9s
   twitter: c9s
   lang: zh
-  subject: 'TBD'
-  summary: |-
+  subject: 'Virtual Machines: their common parts and what makes them special'
+  summary: "Language-based virtual machines were designed and implemented from different backgrounds, concepts and thinking.
+
+In this talk, we will peek into the implementation of some language VMs (especially CRuby) to understand the complex internal parts."
 - schedule_id: 15
   order: 1
   keynote: true
