@@ -9,7 +9,7 @@
   lang: en
   subject: 'TBD'
   summary: |-
-- schedule_id: 19
+- schedule_id: 31
   order: 1
   keynote: true
   name: 'Yo-An Lin (C9S)'
@@ -35,7 +35,7 @@ In this talk, we will peek into the implementation of some language VMs (especia
   lang: en
   subject: 'The Journey to One Million'
   summary: "Modern servers are capable of supporting millions of clients, both in terms of requests per second, and simultaneous connections. However, unless scalability is a priority, it can be very difficult to utilise the available hardware efficiently. Overheads in the application code, frameworks and operating system can act as force multipliers which increase memory pressure, latency and resource utilisation. We discuss the challenges encountered when scaling Ruby to one million concurrent WebSocket connections, and investigate the changes required to make it possible."
-- schedule_id: 31
+- schedule_id: 19
   order: 1
   keynote: true
   name: 'Aaron Patterson'
