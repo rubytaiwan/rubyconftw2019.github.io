@@ -59,3 +59,22 @@ partner:
     link: https://www.kkco.com.tw
     desc: |-
       KlickKlack Communications 提供專業的有線與無線網路服務，使人與人間的通訊落差降到最低，以我們的豐富經驗，為客戶量身打造最適合的活動網路構建方案，整合網路監控、系統交叉備援、即時廣告互動等。團隊已服務近千場活動，案例包含台灣地區最大的線上遊戲、網路直播、資訊社群、產品發表會、演唱會、會場展覽與電音派對等。
+
+speakers:
+  - name: 'GitHub'
+    logo: 'github.svg'
+    link: https://github.com/
+    desc: |-
+      GitHub is how people build software. With a community of more than 26 million people, developers can discover, use, and contribute to over 95 million projects using a powerful collaborative development workflow.
+  - name: 'Kisko Labs'
+    logo: 'kisko.svg'
+    link: https://www.kiskolabs.com/
+    desc: |-
+      Digitaalinen liiketoiminnan kehitys, käyttöliittymäsuunnittelu, mobiilisovellukset ja web-kehitys saman katon alta. Autamme löytämään oikean tien.
+  - name: 'Speee, Inc.'
+    logo: 'speee.svg'
+    link: https://speee.jp/
+    desc: |-
+      Speee has a mission to "Contribute to growth of society by creating new service which has an impact on our world" and deliver high added value through both Business-to-Business and Business-to-Consumer services.
+      We invited Mr.Yukihiro Matsumoto, who invented Ruby, as an engineering adviser and Mr.Masahiro Ihara, who had been working for Cookpad as an engineering manager, to reform our engineering department's system and organization structure.
+      We are now aiming to become "Speee as a technology company".
