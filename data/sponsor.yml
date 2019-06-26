@@ -56,6 +56,12 @@ silver:
       Founded 11 years ago on the principals of collaboration, Ticketsolve works closely with customers to really understand their needs, now and into the future - and in ways that go way beyond just ticketing.
 
       We want to ensure all our customers achieve their goals and get the most out of Ticketsolve.
+  - name: '愛料理'
+    logo: 'icook.svg'
+    link: https://icook.tw/
+    desc: |-
+      台灣最大料理生活平台，我們深信料理是一件幸福的事，分享食譜則是分享幸福給更多的人。你可以尋找喜愛的食譜，也可以驕傲分享自己的食譜，認識和你一樣喜愛料理的朋友。
+
 partner:
   - name: '五倍紅寶石股份有限公司'
     logo: '5xruby.svg'
