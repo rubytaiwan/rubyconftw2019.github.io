@@ -70,6 +70,13 @@ partner:
     desc: |-
       KlickKlack Communications 提供專業的有線與無線網路服務，使人與人間的通訊落差降到最低，以我們的豐富經驗，為客戶量身打造最適合的活動網路構建方案，整合網路監控、系統交叉備援、即時廣告互動等。團隊已服務近千場活動，案例包含台灣地區最大的線上遊戲、網路直播、資訊社群、產品發表會、演唱會、會場展覽與電音派對等。
 
+media_partner:
+  - name: 'iThome'
+    logo: 'ithome.svg'
+    link: https://www.ithome.com.tw/
+    desc: |-
+      iThome 自 1997 年成立至今，超過 20 年，是台灣最專業的企業 IT 媒體，長期報導企業資訊應用、IT管理、資訊產品與技術發展，主要讀者群為企業中的 CIO、IT/MIS 人員、App 或軟體開發從業人員、CEO 等。3成讀者是企業中高階主管，4成是技術部門人員。
+
 speakers:
   - name: 'GitHub'
     logo: 'github.svg'

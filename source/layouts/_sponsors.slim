@@ -6,9 +6,9 @@ section.section.is-alt-section.sponsors#sponsors-section.is-paddingless
 
       - data.sponsor.each do |session|
         - if session[1].present?
-          .level.has-margin-top-md
+          .level.has-margin-top-md.has-margin-top-lg-tablet
             .level-item
-              p.title.is-text-alt.is-capitalized.has-text-brown = session[0].gsub('-', ' ')
+              p.title.is-text-alt.is-capitalized.has-text-brown = session[0].titleize
           .columns.is-multiline class="#{session[0] == 'platinum' ? '' : 'is-centered'}"
             - session[1].each do |item|
               .column class="#{session[0] == 'platinum' ? 'is-half' : 'is-one-third'}"
