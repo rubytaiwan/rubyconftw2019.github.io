@@ -34,20 +34,21 @@ parties:
   - session: |-
       Pre
       Party
-    date: 
-    time:
-    location: 
-    locationLink: 
-    registerLink: 
+    date: July 25, 2019
+    time: 19:00 - 21:30
+    location: PicCollage Office
+    locationLink: https://goo.gl/maps/85JqF2Zm2BmCNTYq8
+    registerLink:
     cfaBtn: Coming Soon
+
   - session: |-
       The
       Official
       Party
-    date:
-    time:
-    location:
-    locationLink:
+    date: July 26, 2019
+    time: 18:30 - 21:30
+    location: CHANG YUNG-FA FOUNDATION International Convention Center 8F
+    locationLink: https://goo.gl/maps/X8AgaDuGJEvJ2RhVA
     registerLink:
     cfaBtn: Free for Attendee
   - session: |-
@@ -57,8 +58,8 @@ parties:
     time: 10:30 - 18:00
     location: 5XRUBY CO., LTD
     locationLink: https://goo.gl/maps/2Z1qETBU2DHjxPvz8
-    registerLink:
-    cfaBtn: Free for Attendee
+    registerLink: https://ubin.io/ufk1wq
+    cfaBtn: Register Now
 
 teamMember:
   - name: 'Mu-Fan Teng'

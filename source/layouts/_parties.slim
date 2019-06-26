@@ -24,7 +24,10 @@ section.section.is-alt-section.parties#parties-section.is-paddingless
                     i.fas.fa-map-marker-alt
                   | &nbsp;
                   = link_to party.location, party.locationLink, target:'_blank', rel:'noopener', class:"has-text-primary"
-                button.button.parties__btn.is-outlined.is-primary.is-medium.is-fullwidth.has-margin-top-sm = party.cfaBtn
+                - if party.registerLink?
+                  = link_to party.cfaBtn, party.registerLink, target:'_blank', rel:'noopener', class:"button parties__btn is-outlined is-primary is-medium is-fullwidth has-margin-top-sm"
+                - else
+                  button.button.parties__btn--disabled.is-outlined.is-primary.is-medium.is-fullwidth.has-margin-top-sm = party.cfaBtn
 
             - else
               .parties__info.coming-soon
