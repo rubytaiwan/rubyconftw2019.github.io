@@ -7,8 +7,8 @@
   twitter: yukihiro_matz
   github: matz
   lang: en
-  subject: 'TBD'
-  summary: |-
+  subject: 'The Future of Ruby'
+  summary: 'Brief introduction of Ruby3 and further.'
 - schedule_id: 31
   order: 1
   keynote: true
