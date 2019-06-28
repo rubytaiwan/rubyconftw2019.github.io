@@ -29,6 +29,13 @@ platinum:
     desc: |-
       Scout provides an APM (application performance monitoring) that helps solve memory bloat, performance abnormalities, and other issues. Our goal is to provide deep insights to developers with our intuitive user interface. We provide our APM for Ruby, Python and Elixir.
 
+gold:
+  - name: 'Faria Education Group'
+    logo: 'feg.png'
+    link: https://www.fariaedu.com/
+    desc: |-
+      Faria was founded in 2006 to transition schools from paper onto a curriculum-focused learning platform. Today, Faria powers curriculum for over 10,000 schools & districts and 3 million students with a suite of 3 services. ManageBac, Faria's flagship product, for curriculum planning, assessment and reporting for IB World schools, OpenApply for paperless admissions from enquiry to enrolment, and Atlas for curriculum management enabling schools to collaboratively plan, share, and analyze their curriculum. Faria’s multi-disciplinary team of over 150 operates globally, across 8 offices.
+
 silver:
   - name: '5FPRO 伍樓專業'
     logo: '5fpro.svg'

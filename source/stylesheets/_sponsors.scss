@@ -38,6 +38,10 @@
   &__logo {
     max-width: 180px;
 
+    &--gold {
+      max-width: 240px;
+    }
+
     &--platinum {
       max-width: 280px;
     }
@@ -49,6 +53,10 @@
 
     &__logo {
       max-width: 240px;
+
+      &--gold {
+        max-width: 280px;
+      }
 
       &--platinum {
         max-width: 340px;
