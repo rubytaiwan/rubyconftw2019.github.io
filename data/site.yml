@@ -32,14 +32,14 @@ eventGoogleMap: https://www.google.com/maps/place/張榮發基金會/@25.038668,
 
 parties:
   - session: |-
-      Pre
-      Party
+      Pre-Party by
+      PicCollage
     date: July 25, 2019
-    time: 19:00 - 21:30
+    time: 19:00 - 22:00
     location: PicCollage Office
     locationLink: https://goo.gl/maps/85JqF2Zm2BmCNTYq8
-    registerLink:
-    cfaBtn: Coming Soon
+    registerLink: https://ubin.io/ZsX97N
+    cfaBtn: Register Now
 
   - session: |-
       The
@@ -52,8 +52,8 @@ parties:
     registerLink:
     cfaBtn: Free for Attendee
   - session: |-
-      After
-      Hack
+      After Hack by
+      5xRuby
     date: July 28, 2019
     time: 10:30 - 18:00
     location: 5XRUBY CO., LTD
