@@ -63,6 +63,11 @@ silver:
       Founded 11 years ago on the principals of collaboration, Ticketsolve works closely with customers to really understand their needs, now and into the future - and in ways that go way beyond just ticketing.
 
       We want to ensure all our customers achieve their goals and get the most out of Ticketsolve.
+  - name: 'Tripla'
+    logo: 'tripla.png'
+    link: https://corp.tripla.jp/
+    desc: |-
+      AI chatbot company for hospitality and travel industry in Japan
   - name: '愛料理'
     logo: 'icook.svg'
     link: https://icook.tw/
