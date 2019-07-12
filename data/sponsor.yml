@@ -28,6 +28,14 @@ platinum:
     link: https://scoutapm.com/
     desc: |-
       Scout provides an APM (application performance monitoring) that helps solve memory bloat, performance abnormalities, and other issues. Our goal is to provide deep insights to developers with our intuitive user interface. We provide our APM for Ruby, Python and Elixir.
+  - name: 'Cyberbiz / 順立智慧股份有限公司'
+    logo: 'cyberbiz.png'
+    link: https://www.cyberbiz.co
+    desc: |-
+      Cyberbiz 提供一站式［新零售］解決方案，為市場上唯一整合［線上電商+線下門市+倉儲物流］3大核心產品的平台。
+      ★開店平台－－品牌購物官網快速架設
+      ★門市POS系統－－實體門市資訊整合
+      ★智慧倉儲－－代揀貨代出貨，省下隱形經營成本 我們協助店家用最短時間、最少力氣完成OMO線上線下融合，並致力於提供給消費者最棒的購物體驗！
 
 gold:
   - name: 'Faria Education Group'
