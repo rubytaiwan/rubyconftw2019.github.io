@@ -103,6 +103,13 @@ media_partner:
     desc: |-
       iThome 自 1997 年成立至今，超過 20 年，是台灣最專業的企業 IT 媒體，長期報導企業資訊應用、IT管理、資訊產品與技術發展，主要讀者群為企業中的 CIO、IT/MIS 人員、App 或軟體開發從業人員、CEO 等。3成讀者是企業中高階主管，4成是技術部門人員。
 
+gift:
+  - name: JetBrains
+    logo: JetBrains.svg
+    link: https://www.jetbrains.com
+    desc: |
+      At JetBrains, code is our passion. For over 19 years we have strived to make the strongest, most effective developer tools on earth. By automating routine checks and corrections, our tools speed up production, freeing developers to grow, discover and create.
+
 speakers:
   - name: 'GitHub'
     logo: 'github.svg'
