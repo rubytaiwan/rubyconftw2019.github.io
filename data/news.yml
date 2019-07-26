@@ -1,3 +1,13 @@
+- title: "The URL of intepretation service has been released!"
+  date: "2019/07/26"
+  slug: "interpretation-service-released"
+  content: |-
+    We offer interpretation service and have just opened at: https://rubyconftw2019.auxala.com , open the URL on your smartphone browser and listen from your earphone!
+- title: "The subjectof Aaron's keynote has been changed!"
+  date: "2019/07/26"
+  slug: "tenderlove-talk-changed"
+  content: |-
+    The subject of Aaron's keynote has been changed to "Compacting GC for MRI", check it!
 - title: "All parties are released!"
   date: "2019/07/1"
   slug: "all-parties-are-released"

@@ -45,17 +45,8 @@ In this talk, we will peek into the implementation of some language VMs (especia
   github: tenderlove
   twitter: tenderlove
   lang: en
-  subject: The View Is Clear from Here
-  summary: "Web applications typically have bottlenecks at the database layer.  This is one
-reason Active Record gets so much attention by application developers, Rails
-core developers, and conference speakers.  In this talk we will be focusing on
-something a little bit different.  Instead of the database layer, we will be
-looking at the view layer of the application.  We will be looking at how view
-rendering is handled in Rails.  This will include the process by which views are
-compiled, cached, and rendered.  We'll learn how much memory they are found, how
-much memory they use, and more importantly how we can speed them up.  Audience
-members should expect to leave with more information about Rails internals along
-with development techniques that they can use in their applications today!"
+  subject: Compacting GC for MRI
+  summary: "In this talk we will cover an implementation for a compacting GC in MRI.  MRI's implementation presents unique challenges for implementing a compacting GC.  In this talk, we will cover compactor implementation and algorithms, challenges presented by MRI's implementation, compaction reference verification, and results of compactor benchmarks."
 - schedule_id: 11
   order: 2
   name: Jenna Blumenthal
